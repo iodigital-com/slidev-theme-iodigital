@@ -1,0 +1,45 @@
+/* TT Commons Pro */
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Regular.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Medium.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Medium-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TTCommonsPro/TTCommonsPro-Bold-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Reckless */
+@font-face {
+    font-family: 'Reckless';
+    src: url('./fonts/Reckless/OTF/Reckless-Light-Italic.otf') format('opentype'),
+        url('./fonts/Reckless/TTF/Reckless-Light-Italic.ttf') format('truetype'),
+        url('./fonts/Reckless/WEB/Reckless-Light-Italic.woff') format('woff'),
+        url('./fonts/Reckless/WEB/Reckless-Light-Italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
