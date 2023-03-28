@@ -1,13 +1,8 @@
-:root {
-  // default theme color
-  // can be overrided by uses `themeConfig` option
-  --slidev-theme-primary: #5d8392;
-}
+/* :root {
+  --slidev-theme-primary: #ED7F53;
+} */
 
-.slidev-layout.cover,
-.slidev-layout.intro {
-  @apply h-full grid;
-
+.slidev-layout {
   h1 {
     @apply text-6xl leading-20;
   }
@@ -19,6 +14,31 @@
   :is(h1, p) > em {
     font-family: 'Reckless';
   }
+
+  &:is(.bg-orange, .bg-blend-orange) {
+    background-color: var(--slidev-theme-primary-orange);
+  }
+  &:is(.bg-blue, .bg-blend-blue) {
+    background-color: var(--slidev-theme-primary-blue);
+  }
+  &:is(.bg-purple, .bg-blend-purple) {
+    background-color: var(--slidev-theme-primary-purple);
+  }
+
+  &:is(.bg-blend-orange) {
+    background: url('./blends/iO-blend-orange-16_9.jpg') no-repeat center center;
+  }
+  &:is(.bg-blend-blue) {
+    background: url('./blends/iO-blend-blue-16_9.jpg') no-repeat center center;
+  }
+  &:is(.bg-blend-purple) {
+    background: url('./blends/iO-blend-purple-16_9.jpg') no-repeat center center;
+  }
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
 
   h1 + p {
     @apply -mt-2 opacity-50 mb-4;
