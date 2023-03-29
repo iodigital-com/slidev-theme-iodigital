@@ -5,7 +5,7 @@ const props = defineProps({
     network: {
         type: String,
         validator(network) {
-            Object.keys(networks).includes(network);
+            return Object.keys(networks).includes(network);
         }
     },
 });
