@@ -7,7 +7,7 @@ declare type Network = {
     /**
      * Path to a resource, either absolute or relative
      */
-    icon?: any,
+    icon?: string,
 
     /**
      * Prefix of the handle, if any. Think of the "@" for Twitter handles
