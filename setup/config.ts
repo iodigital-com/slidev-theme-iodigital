@@ -1,15 +1,30 @@
-export const networks = {
+declare type Network = {
+    /**
+     * Base URL of the network
+     */
+    base: string,
+
+    /**
+     * Path to a resource, either absolute or relative
+     */
+    icon?: any,
+
+    /**
+     * Prefix of the handle, if any. Think of the "@" for Twitter handles
+     */
+    handlePrefix?: string,
+};
+
+export const networks: Record<string, Network> = {
     github: {
         base: 'https://github.com/',
-        icon: 'github',
     },
     twitter: {
         base: 'https://twitter.com/',
-        icon: 'twitter',
+        handlePrefix: '@',
     },
     linkedin: {
         base: 'https://linkedin.com/in/',
-        icon: 'linkedin',
     },
     io: {
         base: 'https://techhub.iodigital.com/authors/',

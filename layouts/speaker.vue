@@ -46,9 +46,9 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
     @apply flex justify-center w-full
 }
 .social > ul {
-    @apply list-none;
+    @apply list-none flex flex-row align-baseline;
 }
 .social > ul > li {
-    @apply inline-block;
+    @apply block;
 }
 </style>

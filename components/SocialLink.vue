@@ -12,19 +12,29 @@ const props = defineProps({
     },
 });
 
-const networkBase = computed(() => `${networks[props.network].base.replace(/(?=.*)\/$/, '')}`);
+const { icon, base, handlePrefix } = networks[props.network];
+const networkBase = computed(() => `${base.replace(/(?=.*)\/$/, '')}`);
+const networkHandle = computed(() => `${handlePrefix ?? ''}${props.handle}`);
+const isCustomIcon = computed(() => {
+    if (!icon) {
+        return false;
+    }
+
+    return icon.includes('://') || icon.startsWith('/');
+});
 </script>
 
 <template>
     <a :href="`${networkBase}/${handle}`" target="_blank" rel="noopener noreferrer" >
-        <img class="icon" :src="networks[props.network].icon" />
-        <span class="handle">{{ props.handle }}</span>
+        <img v-if="isCustomIcon" :src="icon" class="icon" />
+        <SocialIcon v-else :network="props.network" />
+        <span class="handle">{{ networkHandle }}</span>
     </a>
 </template>
 
 <style scoped>
 a {
-    @apply flex gap-1;
+    @apply flex gap-1 items-center;
 }
 .icon {
     width: 1rem;

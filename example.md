@@ -63,7 +63,7 @@ image: https://www.davebitter.com/img/dave.jpg
 - <SocialLink network="io" handle="dave-bitter" />
 - <SocialLink network="github" handle="DaveBitter" />
 - <SocialLink network="linkedin" handle="davebitter" />
-- <SocialLink network="twitter" handle="@dave_bitter" />
+- <SocialLink network="twitter" handle="dave_bitter" />
 ---
 
 # Navigation
