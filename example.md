@@ -1,9 +1,21 @@
 ---
 theme: ./
+themeConfig:
+  primary-orange: '#ed7f53'
+  primary-blue: '#365fd9'
+  primary-purple: '#a13865'
+  secondary-orange: '#fdbc75'
+  secondary-blue: '#868ada'
+  secondary-purple: '#f5b3cc'
+  tertiary-orange: '#f8c4ae'
+  tertiary-blue: '#9caee9'
+  tertiary-purple: '#c398b7'
 # title: 'iO Digital theme'
+favicon: ./logo/iO-logo_black.svg
 font:
   provider: 'none'
   fallback: false
+layout: 'cover'
 ---
 # iO Digital <em>theme for Slidev</em> presentations
 
@@ -35,6 +47,23 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 
+---
+layout: speaker
+image: https://www.davebitter.com/img/dave.jpg
+---
+
+# Dave Bitter
+
+- 👨🏼‍🦲 Senior Front-end Consultant
+- 👨🏼‍💼 Developer Advocate
+- 👌 Google Developer Expert for Web
+- 💥 <em>Sucks</em> at pool
+
+::social::
+- <SocialLink network="io" handle="dave-bitter" />
+- <SocialLink network="github" handle="DaveBitter" />
+- <SocialLink network="linkedin" handle="davebitter" />
+- <SocialLink network="twitter" handle="dave_bitter" />
 ---
 
 # Navigation

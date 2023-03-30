@@ -22,6 +22,7 @@
     "theme-vitesse": "^0.6.4"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.50",
     "@slidev/cli": "^0.40.5"
   },
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
