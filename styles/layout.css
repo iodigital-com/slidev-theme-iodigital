@@ -17,6 +17,7 @@
 
   dl {
     @apply text-sm;
+
     &:not(:first-child) {
       @apply mt-10;
     }
