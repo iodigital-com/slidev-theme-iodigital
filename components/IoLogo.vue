@@ -18,5 +18,5 @@ const image = computed(() => {
 </script>
 
 <template>
-    <img :src="image" alt="iO Digital logo">
+    <img :src="image" alt="iO logo">
 </template>
