@@ -10,23 +10,40 @@ themeConfig:
   tertiary-orange: '#f8c4ae'
   tertiary-blue: '#9caee9'
   tertiary-purple: '#c398b7'
-# title: 'iO Digital theme'
+  grey-cover: '#454545'
 favicon: ./logo/iO-logo_black.svg
 font:
   provider: 'none'
   fallback: false
-layout: 'cover'
+transition: 'slide-left'
+
+layout: cover
+image: './beekeeper.jpg'
+# image: './beehive.jpg'
+# image: './shape.png'
+# image: './IO_Amsterdam_957.jpg'
 ---
-# iO Digital <em>theme for Slidev</em> presentations
-
 Presentation slides for developers
+# Theme for <em>Slidev</em> presentations
 
-<div class="pt-12">
-  <span @click="next" class="px-2 p-1 rounded cursor-pointer hover:bg-white hover:bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+<dl>
+  <dt>Subjects</dt>
+  <dd>React vs. VueJS vs. SolidJS vs. Angular vs. Web Components vs. The Next Best Thing</dd>
 
+  <dt>Image</dt>
+  <dd>Be sure to pick an image which has it's subject in the frame</dd>
+</dl>
+
+---
+layout: cover
+image: './iO_Antwerpen_1521.jpg'
+---
+
+# Another Cover Slide
+Don't actually use <em>multiple cover slides</em> in a single presentation
+
+---
+class: bg-blend-orange
 ---
 
 # What is Slidev?
@@ -105,7 +122,7 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: center
-class: "text-center"
+class: "text-center bg-blend-blue"
 ---
 
 # Learn More

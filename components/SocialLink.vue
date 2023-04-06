@@ -26,7 +26,7 @@ const isCustomIcon = computed(() => {
 
 <template>
     <a :href="`${networkBase}/${handle}`" target="_blank" rel="noopener noreferrer" >
-        <img v-if="isCustomIcon" :src="icon" class="icon" />
+        <IoLogo v-if="isCustomIcon" color="black" class="w-4" />
         <SocialIcon v-else :network="props.network" />
         <span class="handle">{{ networkHandle }}</span>
     </a>
@@ -35,9 +35,5 @@ const isCustomIcon = computed(() => {
 <style scoped>
 a {
     @apply flex gap-1 items-center;
-}
-.icon {
-    width: 1rem;
-    aspect-ratio: 1;
 }
 </style>
