@@ -82,6 +82,22 @@ image: https://www.davebitter.com/img/dave.jpg
 - <SocialLink network="linkedin" handle="davebitter" />
 - <SocialLink network="twitter" handle="dave_bitter" />
 ---
+layout: speaker
+image: https://avatars.githubusercontent.com/u/6022537?v=4
+---
+
+# Arno Koehler
+
+- 👨🏼 Medior Java Tinkerer
+- 👨🏼‍💼 Team Manager Ninjava
+- 💥 <em>Vakkundig herriemaker</em>
+- 🏋🏼 Crossfitter
+
+::social::
+- <SocialLink network="github" handle="arnokoehler" />
+- <SocialLink network="linkedin" handle="arnokoehler" />
+- <SocialLink network="twitter" handle="arnokoehler" />
+---
 
 # Navigation
 
@@ -105,7 +121,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 Use code snippets and get the highlighting directly!
 
-```ts
+```ts{2,9,11|10,11}
 interface User {
   id: number
   firstName: string
