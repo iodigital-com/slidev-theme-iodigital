@@ -1,11 +1,12 @@
-declare type Network = {
+export type Network = {
     /**
      * Base URL of the network
      */
     base: string,
 
     /**
-     * Path to a resource, either absolute or relative
+     * Icon component. Either from Material Design Icons (Mdi) or custom SVG (iO).
+     * The format is Icon[Collection][Name]. E.g. IconMdiAccount or IconIoLogo
      */
     icon?: string,
 
@@ -15,19 +16,23 @@ declare type Network = {
     handlePrefix?: string,
 };
 
+// Icons (MDI & iO) are auto imported, so don't worry about the red squiglies
 export const networks: Record<string, Network> = {
     github: {
         base: 'https://github.com/',
+        icon: IconMdiGithubBox,
     },
     twitter: {
         base: 'https://twitter.com/',
+        icon: IconMdiTwitterBox,
         handlePrefix: '@',
     },
     linkedin: {
         base: 'https://linkedin.com/in/',
+        icon: IconMdiLinkedin,
     },
     io: {
         base: 'https://techhub.iodigital.com/authors/',
-        icon: '/logo/iO-logo_black.svg',
+        icon: IconIoLogo,
     },
 };

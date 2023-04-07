@@ -43,12 +43,15 @@
     }
 
     &:is(.bg-blend-orange) {
+      @apply text-white;
       background: url('./blends/iO-blend-orange-16_9.jpg') no-repeat center center;
     }
     &:is(.bg-blend-blue) {
+      @apply text-white;
       background: url('./blends/iO-blend-blue-16_9.jpg') no-repeat center center;
     }
     &:is(.bg-blend-purple) {
+      @apply text-white;
       background: url('./blends/iO-blend-purple-16_9.jpg') no-repeat center center;
     }
   }
@@ -59,7 +62,7 @@
   @apply h-full grid;
 
   h1 + p {
-    @apply -mt-2 opacity-50 mb-4;
+    @apply -mt-2 mb-4;
   }
 
   p + h2, ul + h2, table + h2 {

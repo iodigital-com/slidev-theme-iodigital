@@ -1,4 +1,5 @@
 <script setup>
+import IconIoLogo from '~icons/io/logo'; // TODO: remove and fix auto imports
 import { computed } from 'vue';
 const props = defineProps({
     image: {
@@ -17,7 +18,7 @@ const style = computed(() => ({
         <div class="background"><img :src="props.image"></div>
         <div class="relative">
             <div class="logo">
-                <IoLogo class="w-24" />
+                <IconIoLogo class="w-24" />
             </div>
             <div class="w-1/2">
                 <slot />
