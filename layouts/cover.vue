@@ -16,13 +16,11 @@ const style = computed(() => ({
 <template>
     <div class="slidev-layout cover" :style="style">
         <div class="background"><img :src="props.image"></div>
-        <div class="relative">
-            <div class="logo">
-                <IconIoLogo class="w-24" />
-            </div>
-            <div class="w-1/2">
-                <slot />
-            </div>
+        <div class="w-24">
+            <IconIoLogo class="w-full" />
+        </div>
+        <div class="w-1/2">
+            <slot />
         </div>
       </div>
 </template>
