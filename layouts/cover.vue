@@ -1,26 +1,24 @@
 <script setup>
 import IconIoLogo from '~icons/io/logo'; // TODO: remove and fix auto imports
-import { computed } from 'vue';
+
 const props = defineProps({
     image: {
         type: String,
         required: true,
     },
 });
-
-const style = computed(() => ({
-    '--image': `url(${props.image})`,
-}));
 </script>
 
 <template>
-    <div class="slidev-layout cover" :style="style">
+    <div class="slidev-layout cover">
         <div class="background"><img :src="props.image"></div>
-        <div class="w-24">
-            <IconIoLogo class="w-full" />
-        </div>
-        <div class="w-1/2">
-            <slot />
+        <div class="flex flex-col">
+            <div class="w-full">
+                <IconIoLogo class="w-24 h-24" />
+            </div>
+            <div class="w-1/2">
+                <slot />
+            </div>
         </div>
       </div>
 </template>
