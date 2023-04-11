@@ -8,9 +8,11 @@ An iO Digital theme for [Slidev](https://github.com/slidevjs/slidev).
 
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
 
-<pre><code>---
-theme: <b>iodigital</b>
----</code></pre>
+```
+---
+theme: iodigital
+---
+```
 
 Learn more about [how to use a theme](https://sli.dev/themes/use).
 
@@ -32,15 +34,15 @@ image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
 ```
 
-### Speaker
+### Intro
 Use a single slide per speaker to help introduce them.
 
-<img alt="Screenshot of speaker layout" src="./screenshots/layouts/speaker.png" style="max-width: 50%">
+<img alt="Screenshot of intro layout" src="./screenshots/layouts/intro.png" style="max-width: 50%">
 
 Usage:
 ```
 ---
-layout: speaker
+layout: intro
 image: /path/to/speaker/image.png
 imageSide: left|right
 ---
@@ -51,7 +53,7 @@ imageSide: left|right
 This theme provides the following components:
 
 ### SocialLink
-Mainly used in the [speaker](#speaker) layout. It creates an anchor to a known social network. Only provide the name of the `network` and the speaker's `handle`. Currently, the following [networks](/theme.config.ts#L20) are supported:
+Mainly used in (but not limited to) the [layout](#intro) layout. It creates an anchor to a known social network. Only provide the name of the `network` and the speaker's `handle`. Currently, the following [networks](/theme.config.ts#L20) are supported:
 - iO Techhub
 - LinkedIn
 - Twitter
