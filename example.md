@@ -121,7 +121,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 Use code snippets and get the highlighting directly!
 
-```ts{2,9,11|10,11}
+```ts{all|2,9,11|10,11|all}
 interface User {
   id: number
   firstName: string
