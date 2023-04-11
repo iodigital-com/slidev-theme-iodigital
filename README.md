@@ -46,6 +46,15 @@ layout: intro
 image: /path/to/speaker/image.png
 imageSide: left|right
 ---
+
+# Speaker name
+
+Speaker Description
+
+::social::
+<SocialLink network="io" handle="speaker-handle" />
+<SocialLink network="linkedin" handle="SpeakerHandle" />
+
 ```
 
 ## Components
