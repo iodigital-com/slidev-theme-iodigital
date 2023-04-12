@@ -44,15 +44,15 @@
 
     &:is(.bg-blend-orange) {
       @apply text-white;
-      background: var(--slidev-theme-primary-orange) url('/blends/orange.jpg') no-repeat center center;
+      background: url('/blends/orange.jpg') no-repeat center center;
     }
     &:is(.bg-blend-blue) {
       @apply text-white;
-      background: var(--slidev-theme-primary-blue) url('/blends/blue.jpg') no-repeat center center;
+      background: url('/blends/blue.jpg') no-repeat center center;
     }
     &:is(.bg-blend-purple) {
       @apply text-white;
-      background: var(--slidev-theme-primary-purple) url('/blends/purple.jpg') no-repeat center center;
+      background: url('/blends/purple.jpg') no-repeat center center;
     }
   }
 }

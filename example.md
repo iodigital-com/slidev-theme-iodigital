@@ -15,7 +15,9 @@ favicon: ./logo/iO-logo_black.svg
 font:
   provider: 'none'
   fallback: false
+lineNumbers: true
 transition: 'slide-left'
+# footer: false
 
 layout: cover
 image: './beekeeper.jpg'
