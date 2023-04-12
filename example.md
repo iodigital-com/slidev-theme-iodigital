@@ -65,7 +65,7 @@ Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 
 ---
-layout: speaker
+layout: intro
 image: https://www.davebitter.com/img/dave.jpg
 ---
 
@@ -82,7 +82,7 @@ image: https://www.davebitter.com/img/dave.jpg
 - <SocialLink network="linkedin" handle="davebitter" />
 - <SocialLink network="twitter" handle="dave_bitter" />
 ---
-layout: speaker
+layout: intro
 image: https://avatars.githubusercontent.com/u/6022537?v=4
 ---
 
@@ -121,7 +121,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 Use code snippets and get the highlighting directly!
 
-```ts{2,9,11|10,11}
+```ts{all|2,9,11|10,11|all}
 interface User {
   id: number
   firstName: string
