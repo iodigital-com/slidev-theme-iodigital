@@ -28,7 +28,7 @@ const isFooterVisibile = computed(() => {
 .footer {
     @apply absolute bottom-0 right-0 left-0 z-50 pb-4 px-14;
     @apply flex justify-between;
-    @apply text-white text-xs;
+    @apply text-xs;
 }
 
 .section-title {
