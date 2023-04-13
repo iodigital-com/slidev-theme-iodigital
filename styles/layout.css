@@ -32,26 +32,26 @@
   }
 
   &:not(.cover) {
-    &:is(.bg-orange, .bg-blend-orange) {
+    &.bg-orange, &.bg-blend-orange {
       @apply text-white;
       background-color: var(--slidev-theme-primary-orange);
     }
-    &:is(.bg-blue, .bg-blend-blue) {
+    &.bg-blue, &.bg-blend-blue {
       @apply text-white;
       background-color: var(--slidev-theme-primary-blue);
     }
-    &:is(.bg-purple, .bg-blend-purple) {
+    &.bg-purple, &.bg-blend-purple {
       @apply text-white;
       background-color: var(--slidev-theme-primary-purple);
     }
 
-    &:is(.bg-blend-orange) {
+    &.bg-blend-orange {
       background: url('/blends/orange.jpg') no-repeat center center;
     }
-    &:is(.bg-blend-blue) {
+    &.bg-blend-blue {
       background: url('/blends/blue.jpg') no-repeat center center;
     }
-    &:is(.bg-blend-purple) {
+    &.bg-blend-purple {
       background: url('/blends/purple.jpg') no-repeat center center;
     }
   }
