@@ -37,14 +37,16 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
   </div>
 </template>
 
-<style>
+<style scoped>
 .social {
-    @apply flex justify-center w-full
-}
-.social > ul {
-    @apply list-none flex flex-row align-baseline;
-}
-.social > ul > li {
-    @apply block;
+    @apply flex justify-center w-full;
+
+    &:deep(ul) {
+        @apply list-none flex flex-row align-baseline;
+
+        &:deep(li) {
+            @apply block;
+        }
+    }
 }
 </style>
