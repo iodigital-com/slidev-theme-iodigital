@@ -35,6 +35,13 @@
         "sans": "Nunito Sans",
         "mono": "Fira Code"
       },
+      "font": {
+        "provider": "none",
+        "fallback": false
+      },
+      "favicon": "./logo/iO-logo_black.svg",
+      "transition": "slide-left",
+      "lineNumbers": true,
       "hightlighter": "shiki"
     }
   }
