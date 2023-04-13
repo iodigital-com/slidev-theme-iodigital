@@ -16,6 +16,13 @@ theme: iodigital
 
 Learn more about [how to use a theme](https://sli.dev/themes/use).
 
+## Settings
+Next to the [available frontmatter customizations](https://sli.dev/custom/), this theme provide a few additional ones.
+
+| Name   | Type      | Default | Use         | Description |
+| ------ | --------- | ------- | ----------- | ----------- |
+| footer | `boolean` | `true`  | First Slide | Display the footer on each slide (except for layouts `cover`, `intro` & `end`)
+
 ## Layouts
 
 This theme provides the following layouts:

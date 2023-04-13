@@ -16,7 +16,11 @@ export type Network = {
     handlePrefix?: string,
 };
 
-// Icons (MDI & iO) are auto imported, so don't worry about the red squiglies
+/**
+ * Record of which social networks are available in the theme. These are used by SocialLink component
+ *
+ * @ignore icons (MDI & iO) are auto imported, so don't worry about the red squiglies
+ */
 export const networks: Record<string, Network> = {
     github: {
         base: 'https://github.com/',
@@ -36,3 +40,8 @@ export const networks: Record<string, Network> = {
         icon: IconIoLogo,
     },
 };
+
+/**
+ * Layouts in which the footer should not be visible
+ */
+export const footerLayoutBlacklist = ['cover', 'intro', 'end'];

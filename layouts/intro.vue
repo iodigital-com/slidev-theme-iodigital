@@ -20,7 +20,7 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
 </script>
 
 <template>
-  <div class="slidev-layout intro bg-blend-orange">
+  <div class="slidev-layout intro bg-orange">
     <div class="my-auto flex flex-col">
         <div class="flex">
             <div class="w-1/2 flex justify-center items-center p-8 max-h-md object-cover" :class="imageOrder">
@@ -37,14 +37,16 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
   </div>
 </template>
 
-<style>
+<style scoped>
 .social {
-    @apply flex justify-center w-full
-}
-.social > ul {
-    @apply list-none flex flex-row align-baseline;
-}
-.social > ul > li {
-    @apply block;
+    @apply flex justify-center w-full;
+
+    &:deep(ul) {
+        @apply list-none flex flex-row align-baseline;
+
+        &:deep(li) {
+            @apply block;
+        }
+    }
 }
 </style>
