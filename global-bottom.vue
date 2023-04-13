@@ -1,11 +1,11 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { footerLayouts } from './theme.config';
+import { footerLayoutBlacklist } from './theme.config';
 
 const isFooterVisibile = computed(() => {
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
-    const isVisibleOnLayout = !footerLayouts.includes($slidev.nav.currentLayout);
+    const isVisibleOnLayout = !footerLayoutBlacklist.includes($slidev.nav.currentLayout);
 
     return isShowFooter && isVisibleOnLayout;
 });

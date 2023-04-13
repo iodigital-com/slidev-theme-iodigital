@@ -44,4 +44,4 @@ export const networks: Record<string, Network> = {
 /**
  * Layouts in which the footer should not be visible
  */
-export const footerLayouts = ['cover', 'intro', 'end'];
+export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
