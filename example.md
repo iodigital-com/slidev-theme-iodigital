@@ -24,7 +24,6 @@ layout: section
 ---
 
 # What is Slidev?
-New Section
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -48,7 +47,6 @@ image: https://www.davebitter.com/img/dave.jpg
 ---
 
 # Dave Bitter
-Section: What is Slidev?
 
 - 👨🏼‍🦲 Senior Front-end Consultant
 - 👨🏼‍💼 Developer Advocate
@@ -66,7 +64,6 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
 
 # Code
-Section: What is Slidev?
 
 Use code snippets and get the highlighting directly!
 
@@ -87,11 +84,10 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: section
-section: Navigation
+section: New section
 ---
 
 # Navigation
-New Section (Navigation)
 
 Hover on the bottom-left corner to see the navigation's controls panel
 
@@ -110,7 +106,6 @@ image: https://avatars.githubusercontent.com/u/6022537?v=4
 ---
 
 # Arno Koehler
-Section: Navigation
 
 - 👨🏼 Medior Java Tinkerer
 - 👨🏼‍💼 Team Manager Ninjava
@@ -127,7 +122,6 @@ class: "text-center bg-blend-blue"
 ---
 
 # Learn More
-Section: Navigation
 
 [Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
 
@@ -136,7 +130,6 @@ section: false
 ---
 
 # Yet another slide
-Section: false
 
 The footer should display the presentation's title from here on out
 
@@ -146,5 +139,3 @@ layout: quote
 
 # Products are made in a factory but brands are created in the mind
 Walter Landor
-
-Section: false

@@ -50,29 +50,28 @@ export const getSectionTitleGetter = ($slidev: any, rawRoutes: any[]) => () => {
     if (rawRoutes.length) {
         for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
             const { meta } = rawRoutes[i];
-
             const section = meta.section ?? true;
+
             if (section === false) {
-                // Fall back
+                // Quit using sections. Use the fall back
                 break;
             }
-            if (meta.layout === 'section') {
-                if (section === true) { // Default value for section
-                    if (meta.slide?.title) {
-                        // use the current slide's title
-                        return meta.slide?.title;
-                    }
-                    // or fall back if not available
-                    break;
-                }
-                else if (typeof section === 'string') {
-                    // If it is a string, use that as title
-                    return section;
-                }
+
+            if (meta.layout !== 'section') {
+                // Not a section, on to the previous slide
+                continue;
+            }
+            if (section === true && meta.slide?.title) {
+                // Use the current slide’s title
+                return meta.slide?.title;
+            }
+
+            if (typeof section === 'string') {
+                // Override the section title with a custom one
+                return section;
             }
         }
     }
-
     // Default value
     return $slidev.configs.title;
 }
