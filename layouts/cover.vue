@@ -53,6 +53,6 @@ const props = defineProps({
 .placeholder {
     @apply h-full float-right;
     width: 60%;
-    shape-outside: ircle(55% at center)
+    shape-outside: circle(55% at center)
 }
 </style>
