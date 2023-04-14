@@ -16,10 +16,10 @@ export type Network = {
     handlePrefix?: string,
 };
 
+declare const IconMdiGithubBox, IconMdiTwitterBox, IconMdiLinkedin, IconIoLogo;
+
 /**
  * Record of which social networks are available in the theme. These are used by SocialLink component
- *
- * @ignore icons (MDI & iO) are auto imported, so don't worry about the red squiglies
  */
 export const networks: Record<string, Network> = {
     github: {
@@ -46,27 +46,29 @@ export const networks: Record<string, Network> = {
  */
 export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
 
-export const getSectionTitleGetter = ($slidev, rawRoutes = []) => () => {
-    for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
-        const { meta } = rawRoutes[i];
+export const getSectionTitleGetter = ($slidev: any, rawRoutes: any[]) => () => {
+    if (rawRoutes.length) {
+        for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
+            const { meta } = rawRoutes[i];
 
-        const section = meta.section ?? true;
-        if (section === false) {
-            // Fall back
-            break;
-        }
-        if (meta.layout === 'section') {
-            if (section === true) { // Default value for section
-                if (meta.slide?.title) {
-                    // use the current slide's title
-                    return meta.slide?.title;
-                }
-                // or fall back if not available
+            const section = meta.section ?? true;
+            if (section === false) {
+                // Fall back
                 break;
             }
-            else if (typeof section === 'string') {
-                // If it is a string, use that as title
-                return section;
+            if (meta.layout === 'section') {
+                if (section === true) { // Default value for section
+                    if (meta.slide?.title) {
+                        // use the current slide's title
+                        return meta.slide?.title;
+                    }
+                    // or fall back if not available
+                    break;
+                }
+                else if (typeof section === 'string') {
+                    // If it is a string, use that as title
+                    return section;
+                }
             }
         }
     }
