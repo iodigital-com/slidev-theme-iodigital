@@ -1,6 +1,15 @@
-/* :root {
-  --slidev-theme-primary: #ED7F53;
-} */
+:root {
+  --slidev-theme-primary-orange: #ed7f53;
+  --slidev-theme-primary-blue: #365fd9;
+  --slidev-theme-primary-purple: #a13865;
+  --slidev-theme-secondary-orange: #fdbc75;
+  --slidev-theme-secondary-blue: #868ada;
+  --slidev-theme-secondary-purple: #f5b3cc;
+  --slidev-theme-tertiary-orange: #f8c4ae;
+  --slidev-theme-tertiary-blue: #9caee9;
+  --slidev-theme-tertiary-purple: #c398b7;
+  --slidev-theme-grey-cover: #454545;
+}
 
 .slidev-layout {
   @apply tracking-normal leading-7;

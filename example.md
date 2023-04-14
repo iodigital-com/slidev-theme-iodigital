@@ -1,23 +1,5 @@
 ---
 theme: ./
-themeConfig:
-  primary-orange: '#ed7f53'
-  primary-blue: '#365fd9'
-  primary-purple: '#a13865'
-  secondary-orange: '#fdbc75'
-  secondary-blue: '#868ada'
-  secondary-purple: '#f5b3cc'
-  tertiary-orange: '#f8c4ae'
-  tertiary-blue: '#9caee9'
-  tertiary-purple: '#c398b7'
-  grey-cover: '#454545'
-favicon: ./logo/iO-logo_black.svg
-font:
-  provider: 'none'
-  fallback: false
-lineNumbers: true
-transition: 'slide-left'
-# footer: false
 
 layout: cover
 image: './beekeeper.jpg'

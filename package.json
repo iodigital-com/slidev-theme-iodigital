@@ -31,10 +31,9 @@
     "colorSchema": "both",
     "highlighter": "shiki",
     "defaults": {
-      "fonts": {
-        "sans": "Nunito Sans",
-        "mono": "Fira Code"
-      },
+      "favicon": "./logo/iO-logo_black.svg",
+      "transition": "slide-left",
+      "lineNumbers": true,
       "hightlighter": "shiki"
     }
   }
