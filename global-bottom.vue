@@ -1,7 +1,8 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { footerLayoutBlacklist } from './theme.config';
+import { getSectionTitleGetter, footerLayoutBlacklist } from './theme.config';
+import rawRoutes from '/@slidev/routes';
 
 const isFooterVisibile = computed(() => {
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
@@ -9,6 +10,7 @@ const isFooterVisibile = computed(() => {
 
     return isShowFooter && isVisibleOnLayout;
 });
+const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const isFooterVisibile = computed(() => {
     >
         <div class="flex items-end gap-x-8">
             <span class="page-count">{{  $slidev.nav.currentPage }}</span>
-            <span class="section-title">{{ $slidev.configs.title }}</span>
+            <span class="section-title">{{ latestSectionTitleOrPresentationTitle }}</span>
         </div>
         <IconIoLogo class="logo" />
     </footer>

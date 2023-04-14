@@ -16,10 +16,10 @@ export type Network = {
     handlePrefix?: string,
 };
 
+declare const IconMdiGithubBox, IconMdiTwitterBox, IconMdiLinkedin, IconIoLogo;
+
 /**
  * Record of which social networks are available in the theme. These are used by SocialLink component
- *
- * @ignore icons (MDI & iO) are auto imported, so don't worry about the red squiglies
  */
 export const networks: Record<string, Network> = {
     github: {
@@ -45,3 +45,33 @@ export const networks: Record<string, Network> = {
  * Layouts in which the footer should not be visible
  */
 export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
+
+export const getSectionTitleGetter = ($slidev: any, rawRoutes: any[]) => () => {
+    if (rawRoutes.length) {
+        for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
+            const { meta } = rawRoutes[i];
+            const section = meta.section ?? true;
+
+            if (section === false) {
+                // Quit using sections. Use the fall back
+                break;
+            }
+
+            if (meta.layout !== 'section') {
+                // Not a section, on to the previous slide
+                continue;
+            }
+            if (section === true && meta.slide?.title) {
+                // Use the current slide’s title
+                return meta.slide?.title;
+            }
+
+            if (typeof section === 'string') {
+                // Override the section title with a custom one
+                return section;
+            }
+        }
+    }
+    // Default value
+    return $slidev.configs.title;
+}

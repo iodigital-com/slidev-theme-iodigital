@@ -28,7 +28,7 @@
   },
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
   "slidev": {
-    "colorSchema": "both",
+    "colorSchema": "light",
     "highlighter": "shiki",
     "defaults": {
       "favicon": "./logo/iO-logo_black.svg",
