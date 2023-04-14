@@ -19,18 +19,12 @@ Presentation slides for developers
 </dl>
 
 ---
-layout: cover
-image: './iO_Antwerpen_1521.jpg'
----
-
-# Another Cover Slide
-Don't actually use <em>multiple cover slides</em> in a single presentation
-
----
 class: bg-blend-orange
+layout: section
 ---
 
 # What is Slidev?
+New Section
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -54,6 +48,7 @@ image: https://www.davebitter.com/img/dave.jpg
 ---
 
 # Dave Bitter
+Section: What is Slidev?
 
 - 👨🏼‍🦲 Senior Front-end Consultant
 - 👨🏼‍💼 Developer Advocate
@@ -66,42 +61,12 @@ image: https://www.davebitter.com/img/dave.jpg
 - <SocialLink network="linkedin" handle="davebitter" />
 - <SocialLink network="twitter" handle="dave_bitter" />
 ---
-layout: intro
-image: https://avatars.githubusercontent.com/u/6022537?v=4
----
-
-# Arno Koehler
-
-- 👨🏼 Medior Java Tinkerer
-- 👨🏼‍💼 Team Manager Ninjava
-- 💥 <em>Vakkundig herriemaker</em>
-- 🏋🏼 Crossfitter
-
-::social::
-- <SocialLink network="github" handle="arnokoehler" />
-- <SocialLink network="linkedin" handle="arnokoehler" />
-- <SocialLink network="twitter" handle="arnokoehler" />
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
----
 layout: image-right
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
 
 # Code
+Section: What is Slidev?
 
 Use code snippets and get the highlighting directly!
 
@@ -121,10 +86,56 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
+layout: section
+section: Je mOeDer
+---
+
+# Navigation
+New Section (Je mOeDer)
+
+Hover on the bottom-left corner to see the navigation's controls panel
+
+### Keyboard Shortcuts
+
+|     |     |
+| --- | --- |
+| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
+
+---
+layout: intro
+image: https://avatars.githubusercontent.com/u/6022537?v=4
+---
+
+# Arno Koehler
+Section: Je mOeDer
+
+- 👨🏼 Medior Java Tinkerer
+- 👨🏼‍💼 Team Manager Ninjava
+- 💥 <em>Vakkundig herriemaker</em>
+- 🏋🏼 Crossfitter
+
+::social::
+- <SocialLink network="github" handle="arnokoehler" />
+- <SocialLink network="linkedin" handle="arnokoehler" />
+- <SocialLink network="twitter" handle="arnokoehler" />
+---
 layout: center
 class: "text-center bg-blend-blue"
 ---
 
 # Learn More
+Section: Je mOeDer
 
 [Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+---
+section: false
+---
+
+# Yet another slide
+Section: false
+
+The footer should display the presentation's title from on out
