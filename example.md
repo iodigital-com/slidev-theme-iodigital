@@ -87,11 +87,11 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: section
-section: Je mOeDer
+section: Navigation
 ---
 
 # Navigation
-New Section (Je mOeDer)
+New Section (Navigation)
 
 Hover on the bottom-left corner to see the navigation's controls panel
 
@@ -110,7 +110,7 @@ image: https://avatars.githubusercontent.com/u/6022537?v=4
 ---
 
 # Arno Koehler
-Section: Je mOeDer
+Section: Navigation
 
 - 👨🏼 Medior Java Tinkerer
 - 👨🏼‍💼 Team Manager Ninjava
@@ -127,7 +127,7 @@ class: "text-center bg-blend-blue"
 ---
 
 # Learn More
-Section: Je mOeDer
+Section: Navigation
 
 [Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
 
@@ -138,4 +138,13 @@ section: false
 # Yet another slide
 Section: false
 
-The footer should display the presentation's title from on out
+The footer should display the presentation's title from here on out
+
+---
+layout: quote
+---
+
+# Products are made in a factory but brands are created in the mind
+Walter Landor
+
+Section: false

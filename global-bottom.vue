@@ -1,9 +1,8 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { footerLayoutBlacklist } from './theme.config';
+import { getSectionTitleGetter, footerLayoutBlacklist } from './theme.config';
 import rawRoutes from '/@slidev/routes';
-console.log("🚀 ~ rawRoutes:", rawRoutes)
 
 const isFooterVisibile = computed(() => {
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
@@ -11,34 +10,7 @@ const isFooterVisibile = computed(() => {
 
     return isShowFooter && isVisibleOnLayout;
 });
-const latestSectionTitleOrPresentationTitle = computed(() => {
-    for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
-        const { meta } = rawRoutes[i];
-
-        const section = meta.section ?? true;
-        if (section === false) {
-            // Fall back
-            break;
-        }
-        if (meta.layout === 'section') {
-            if (section === true) { // Default value for section
-                if (meta.slide?.title) {
-                    // use the current slide's title
-                    return meta.slide?.title;
-                }
-                // or fall back if not available
-                break;
-            }
-            else if (typeof section === 'string') {
-                // If it is a string, use that as title
-                return section;
-            }
-        }
-    }
-
-    // Default value
-    return $slidev.configs.title;
-});
+const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
 </script>
 
 <template>

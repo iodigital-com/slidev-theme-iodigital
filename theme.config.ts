@@ -45,3 +45,32 @@ export const networks: Record<string, Network> = {
  * Layouts in which the footer should not be visible
  */
 export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
+
+export const getSectionTitleGetter = ($slidev, rawRoutes = []) => () => {
+    for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
+        const { meta } = rawRoutes[i];
+
+        const section = meta.section ?? true;
+        if (section === false) {
+            // Fall back
+            break;
+        }
+        if (meta.layout === 'section') {
+            if (section === true) { // Default value for section
+                if (meta.slide?.title) {
+                    // use the current slide's title
+                    return meta.slide?.title;
+                }
+                // or fall back if not available
+                break;
+            }
+            else if (typeof section === 'string') {
+                // If it is a string, use that as title
+                return section;
+            }
+        }
+    }
+
+    // Default value
+    return $slidev.configs.title;
+}
