@@ -16,7 +16,8 @@ const props = defineProps({
             <div class="w-full">
                 <IconIoLogo class="w-24 h-24" />
             </div>
-            <div class="w-1/2">
+            <div class="content">
+                <div class="placeholder"></div>
                 <slot />
             </div>
         </div>
@@ -33,8 +34,8 @@ const props = defineProps({
 }
 
 .content {
-    @apply relative;
-
+    @apply relative w-full grow;
+    flex-grow: 1;
     shape-outside: var(--shape);
 }
 
@@ -47,5 +48,11 @@ const props = defineProps({
     & > img {
         @apply h-full drop-shadow-lg
     }
+}
+
+.placeholder {
+    @apply h-full float-right;
+    width: 60%;
+    shape-outside: ircle(55% at center)
 }
 </style>
