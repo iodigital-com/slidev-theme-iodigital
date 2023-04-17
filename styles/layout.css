@@ -66,6 +66,23 @@
   }
 }
 
+.footer {
+  transition: color 200ms ease-out;
+}
+
+.footer:has(
+    + #slideshow > .bg-orange,
+    + #slideshow > .bg-blend-orange, 
+    + #slideshow > .bg-blue,
+    + #slideshow > .bg-blend-blue,
+    + #slideshow > .bg-purple,
+    + #slideshow > .bg-blend-purple
+  ) {
+  &:not([style*="display: none;"]) {
+    @apply text-white;
+  }
+}
+
 .slidev-layout.cover,
 .slidev-layout.intro {
   @apply h-full grid;
