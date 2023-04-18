@@ -66,10 +66,6 @@
   }
 }
 
-.footer {
-  transition: color 200ms ease-out;
-}
-
 .footer:has(+ #slideshow > :is(
   .bg-orange, 
   .bg-blend-orange, 
