@@ -22,8 +22,11 @@
     "theme-vitesse": "^0.6.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@iconify-json/mdi": "^1.1.50",
     "@slidev/cli": "^0.40.5",
+    "husky": "^8.0.3",
     "unplugin-auto-import": "^0.15.2"
   },
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
