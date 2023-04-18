@@ -8,7 +8,15 @@
   --slidev-theme-tertiary-orange: #f8c4ae;
   --slidev-theme-tertiary-blue: #9caee9;
   --slidev-theme-tertiary-purple: #c398b7;
-  --slidev-theme-grey-cover: #454545;
+  --slidev-theme-quaternary-orange: #fce8df;
+  --slidev-theme-quaternary-blue: #d8dff6
+  --slidev-theme-quaternary-purple: #e7d6e2;
+  --slidev-theme-grey-lightest: #f7f7f7;
+  --slidev-theme-grey-lighter: #f4f1ed;
+  --slidev-theme-grey-light: #ebe8e3;
+  --slidev-theme-grey-dark: #ebebeb;
+  --slidev-theme-grey-darker: #c4c4c4;
+  --slidev-theme-grey-darkest: #454545;
 }
 
 .slidev-layout {
@@ -73,7 +81,7 @@
   .bg-blend-blue, 
   .bg-purple, 
   .bg-blend-purple
-  ):not([style*="display: none;"])
+  ):not([style*="display: none;"]) /* The not selector is used to detect if the selector matches the current slide */
 ) {
   @apply text-white;
 }
