@@ -1,4 +1,5 @@
 <script setup>
+import BaseLayout from './base-layout.vue';
 import { computed } from 'vue';
 
 const props = defineProps({
@@ -20,7 +21,7 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
 </script>
 
 <template>
-  <div class="slidev-layout intro bg-orange">
+<base-layout layout="intro" class="bg-orange">
     <div class="my-auto flex flex-col">
         <div class="flex">
             <div class="w-1/2 flex justify-center items-center p-8 max-h-md object-cover" :class="imageOrder">
@@ -34,7 +35,7 @@ const imageOrder = computed(() => props.imageSide === 'left' ? 'order-1' : 'orde
             <slot name="social" />
         </div>
     </div>
-  </div>
+</base-layout>
 </template>
 
 <style scoped>
