@@ -30,7 +30,7 @@ const props = defineProps({
 
     @apply text-white;
 
-    background-color: var(--slidev-theme-grey-cover);
+    background-color: var(--slidev-theme-grey-darkest);
 }
 
 .content {
