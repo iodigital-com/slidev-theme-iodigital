@@ -31,6 +31,7 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
     @apply absolute bottom-0 right-0 left-0 z-50 pb-4 px-14;
     @apply flex justify-between;
     @apply text-xs;
+    @apply transition-[color] duration-200 ease-out
 }
 
 .section-title {

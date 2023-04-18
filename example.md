@@ -19,7 +19,7 @@ Presentation slides for developers
 </dl>
 
 ---
-class: bg-blend-orange
+class: bg-orange
 layout: section
 ---
 
