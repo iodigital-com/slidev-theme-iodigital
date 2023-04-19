@@ -170,5 +170,4 @@ The footer should display the presentation's title from here on out
 layout: quote
 ---
 
-# Products are made in a factory but brands are created in the mind
-Walter Landor
+Products are made in a factory but brands are created in the mind - Walter Landor
