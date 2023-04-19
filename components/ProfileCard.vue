@@ -22,14 +22,12 @@
 <template>
 	<div class="card">
 		<img v-if="props.image" :src="props.image" :alt="imageAlt" >
-		<div class="card-body">
+		<address class="card-body">
 			<p>{{ name }}</p>
 			<p>{{ props.functionTitle }}</p>
-			<address>
-				<p>{{ props.email }}</p>
-				<p>{{ props.telephone }}</p>
-			</address>
-		</div>
+			<p>{{ props.email }}</p>
+			<p>{{ props.telephone }}</p>
+		</address>
 	</div>
 </template>
 
