@@ -37,6 +37,10 @@
 	.card {
 		@apply w-1/5 inline-block m-4;
 
+		img {
+			@apply mb-4;
+		}
+
 		p {
 			@apply m-0 text-[0.8rem] leading-[1.4rem];
 		}
