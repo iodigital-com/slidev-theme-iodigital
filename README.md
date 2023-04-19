@@ -64,6 +64,20 @@ Speaker Description
 
 ```
 
+### Quote 
+Use a single slide per quote or statement 
+
+<img alt="Screenshot of quote layout" src="./screenshots/layouts/quote.png" style="max-width: 50%">
+ 
+Usage:
+```
+---
+layout: quote
+---
+
+Products are made in a factory but brands are created in the mind - Walter Landor
+```
+
 ## Components
 
 This theme provides the following components:
