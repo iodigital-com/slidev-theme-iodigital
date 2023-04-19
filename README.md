@@ -81,6 +81,22 @@ Usage:
 <SocialLink handle="some-handle" network="io" />
 ```
 
+### ProfileCard
+The this component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`). 
+
+Usage:
+
+```
+<ProfileCard 
+  firstName="John" 
+  lastName="Doe" 
+  functionTitle="Front-end developer"
+  email="john.doe@iodigital.com"
+  telephone="06-12345678"
+  image="https://picsum.photos/200/200"
+  />
+```
+
 ### Icons
 
 This theme supports Material Design Icons (MDI) out of the box. Custom icons are also available (e.g. io logo). Each icon has its own (self-closing) element and can be written in both CamelCase and kebab-case.
