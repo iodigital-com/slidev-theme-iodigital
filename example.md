@@ -83,6 +83,24 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
+layout: default
+
+---
+# Slide title
+## Optional Subtitle
+
+The title will be on the left side. Any onther content is on the right. Basically in 2 different columns.
+- Some
+- List
+- Here
+
+### And one other thing
+
+1. Yo momma is so fat
+1. When she walk past the TV
+1. 3 episodes pass
+
+---
 layout: section
 section: New section
 ---
