@@ -133,6 +133,39 @@ section: false
 
 The footer should display the presentation's title from here on out
 
+<ProfileCard 
+    firstName="John" 
+    lastName="Doe" 
+    functionTitle="Front-end developer"
+    email="john.doe@iodigital.com"
+    telephone="06-12345678"
+    />
+
+<ProfileCard 
+  firstName="John" 
+  lastName="Doe" 
+  functionTitle="Front-end developer"
+  email="john.doe@iodigital.com"
+  telephone="06-12345678"
+  image="https://picsum.photos/200/200"
+  />
+
+  <ProfileCard 
+  firstName="John" 
+  lastName="Doe" 
+  functionTitle="Front-end developer"
+  email="john.doe@iodigital.com"
+  telephone="06-12345678"
+  />
+
+  <ProfileCard 
+  firstName="John" 
+  lastName="Doe" 
+  functionTitle="Front-end developer"
+  email="john.doe@iodigital.com"
+  telephone="06-12345678"
+  />
+
 ---
 layout: quote
 ---
