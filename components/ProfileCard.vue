@@ -9,47 +9,40 @@
 			type: String,
 			required: true,
 		},
-		functionTitle: {
-			type: String,
-			required: false,
-		},
-		email: {
-			type: String,
-			required: false,
-		},
-		telephone: {
-			type: String,
-			required: false,
-		},
-		imgUrl: {
-			type: String,
-			required: false,
-		},
+		functionTitle: String,
+		email: String,
+		telephone: String,
+		image: String,
 	})
+
+	const name = `${props.firstName} ${props.lastName}`;
+	const imageAlt = `${name}'s profile picture`;
 </script>
 
 <template>
 	<div class="card">
-		<img v-if="props.imgUrl" :src="props.imgUrl">
+		<img v-if="props.image" :src="props.image" :alt="imageAlt" >
 		<div class="card-body">
-			<p>{{ props.firstName }} {{ props.lastName }}</p>
+			<p>{{ name }}</p>
 			<p>{{ props.functionTitle }}</p>
-			<p>{{ props.email }}</p>
-			<p>{{ props.telephone }}</p>
+			<address>
+				<p>{{ props.email }}</p>
+				<p>{{ props.telephone }}</p>
+			</address>
 		</div>
 	</div>
 </template>
 
 <style scoped>
 	.card {
-		@apply w-1/5 inline-block m-[1rem];
+		@apply w-1/5 inline-block m-4;
 
 		p {
 			@apply m-0 text-[0.8rem] leading-[1.4rem];
 		}
 
 		&:first-of-type {
-			@apply ml0;
+			@apply ml-0;
 		}
 	}
 </style>
