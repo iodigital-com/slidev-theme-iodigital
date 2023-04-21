@@ -27,6 +27,24 @@ Next to the [available frontmatter customizations](https://sli.dev/custom/), thi
 
 This theme provides the following layouts:
 
+### Default
+This layout will probably be most used for content slides. You can put anything in for content. Whether it be text, an image, a list, an iframe. Just make sure it fits the slide.
+
+<img alt="Screenshot of default layout" src="./screenshots/layouts/default.png" style="max-width: 50%">
+
+Usage:
+
+```
+---
+layout: default <!-- optional -->
+---
+```
+
+# Slide title first
+## Optional subtitle
+
+Amazing content which can be anything, as long as it fits the slide. Just be aware that the subtitle will be show above the title. Both are on the left side.
+
 ### Cover
 As the name suggests, this layout is the first slide of your slide deck. It announces the title/subject of the presentation.
 
