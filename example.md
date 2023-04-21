@@ -189,7 +189,9 @@ The footer should display the presentation's title from here on out
 
 ---
 layout: quote
+author: Walter Landor
+source: 16-04-1992
+cite: https://en.wikipedia.org/wiki/Brand
 ---
 
-# Products are made in a factory but brands are created in the mind
-Walter Landor
+Products are made in a factory but brands are created in the mind
