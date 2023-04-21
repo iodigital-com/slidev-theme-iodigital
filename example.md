@@ -83,6 +83,27 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
+layout: default
+
+---
+# <em>Fresh Prince of Bel-Air</em> Theme Song
+## DJ Jazzy Jeff & The Fresh Prince
+
+Now this is a story all about how my life got flipped, turned upside down. And I'd like to take a minute and sit right there, I'll tell all about how I became the <em>Prince</em> of a town called <em>Bel-Air</em>.
+
+- In West Philadelphia born and raised
+- On the playground was where I spent most of my days
+
+### Chillin' out <em>maxin'</em>, relaxin' all cool
+
+1. And shooting some b-ball outside of the school
+1. When a couple of guys, who where up to no good
+1. started making trouble in my <em>neighborhood</em>
+1. I got in 1 little fight and my mom got scared. She said:
+
+<em>"You're movin' with your auntie and uncle in Bel-Air"</em>
+
+---
 layout: section
 section: New section
 ---
