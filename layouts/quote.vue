@@ -10,9 +10,12 @@
 
 <style scoped>
 	.quote {
-		@apply w-1/2 fixed top-[50%] text-3xl leading-loose;
-		font-family: "reckless";
-		background-color: transparent;
+		@apply w-1/2 fixed top-[50%] ;
+	 	background-color: transparent;
 		border: 0;
+
+		&:deep(p) {
+			@apply text-3xl font-quote leading-[2.2rem];
+		}
 	}
 </style>

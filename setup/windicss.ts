@@ -11,4 +11,12 @@ export default defineWindiSetup(() => ({
     // custom the default background
     'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        body: ['TT Commons Pro'],
+        quote: ['Reckless'],
+      },
+    },
+  },
 }))
