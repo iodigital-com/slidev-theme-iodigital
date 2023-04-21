@@ -131,7 +131,7 @@ layout: full
 ---
 layout: full
 ---
-# Another full size layout
+# Full size layout
 
 <div class="flex">
   <div class="w-1/2 mr-4"><img src="amsterdam.webp" alt="Map of Amsterdam City Center in sepia"></div>
