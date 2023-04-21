@@ -4,6 +4,12 @@ import IconIoLogo from '~icons/io/logo';
 import { getSectionTitleGetter, footerLayoutBlacklist } from './theme.config';
 import rawRoutes from '/@slidev/routes';
 
+const cite = computed(() => {
+    if ($slidev.nav.currentLayout !== "quote") return null;
+
+    return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
+})
+
 const isFooterVisibile = computed(() => {
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
     const isVisibleOnLayout = !footerLayoutBlacklist.includes($slidev.nav.currentLayout);
@@ -19,10 +25,15 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
         class="footer"
     >
         <div class="flex items-end gap-x-8">
-            <span class="page-count">{{  $slidev.nav.currentPage }}</span>
+            <span class="page-count">{{ $slidev.nav.currentPage }}</span>
             <span class="section-title">{{ latestSectionTitleOrPresentationTitle }}</span>
         </div>
-        <IconIoLogo class="logo" />
+        <div class="flex row items-end">
+            <div v-if="!!cite" class="mr-4">
+                <a :href="cite">{{ cite }}</a>
+            </div>
+            <IconIoLogo class="logo" />
+        </div>
     </footer>
 </template>
 
