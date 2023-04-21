@@ -73,9 +73,11 @@ Usage:
 ```
 ---
 layout: quote
+author: Walter Landor
+source: https://en.wikipedia.org/wiki/Brand
 ---
 
-Products are made in a factory but brands are created in the mind - Walter Landor
+Products are made in a factory but brands are created in the mind
 ```
 
 ## Components
