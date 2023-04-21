@@ -72,7 +72,7 @@ Selector 3:
 
     /* Selector 2 */
     &:deep(h1:first-child + h2) {
-        @apply text-sm;
+        @apply text-xl;
 
         transform: translateY(var(--offset-h1));
     }
