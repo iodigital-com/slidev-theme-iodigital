@@ -28,7 +28,11 @@
 		}
 
 		&:deep(figcaption) {
-			@apply text-lg;
+			@apply text-lg font-body font-light;
+
+			&:deep(cite) {
+				@apply not-italic;
+			}
 		}
 
 		

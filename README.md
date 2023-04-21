@@ -74,7 +74,8 @@ Usage:
 ---
 layout: quote
 author: Walter Landor
-source: https://en.wikipedia.org/wiki/Brand
+source: 16-04-1992
+cite: https://en.wikipedia.org/wiki/Brand
 ---
 
 Products are made in a factory but brands are created in the mind
