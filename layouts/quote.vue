@@ -2,8 +2,9 @@
 	import BaseLayout from './base-layout.vue';
 
 	const props = defineProps({
-    	author: String,
-		source: String
+		author: String,
+		source: String,
+		cite: String,
 	});
 </script>
 

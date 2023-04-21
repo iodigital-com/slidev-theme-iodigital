@@ -4,10 +4,10 @@ import IconIoLogo from '~icons/io/logo';
 import { getSectionTitleGetter, footerLayoutBlacklist } from './theme.config';
 import rawRoutes from '/@slidev/routes';
 
-const quoteCite = computed(() => {
+const cite = computed(() => {
     if ($slidev.nav.currentLayout !== "quote") return null;
 
-    return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite;
+    return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
 })
 
 const isFooterVisibile = computed(() => {
@@ -29,8 +29,8 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
             <span class="section-title">{{ latestSectionTitleOrPresentationTitle }}</span>
         </div>
         <div class="flex row items-end">
-            <div v-if="quoteCite" class="mr-4">
-                <a :href="quoteCite">{{ quoteCite }}</a>
+            <div v-if="!!cite" class="mr-4">
+                <a :href="cite">{{ cite }}</a>
             </div>
             <IconIoLogo class="logo" />
         </div>
