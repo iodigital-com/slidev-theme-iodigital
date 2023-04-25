@@ -59,6 +59,19 @@ image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
 ```
 
+### Full
+A full size layout. Title on top. Content can be anything you want. If you want to separate your content into columns, have floating images or a large video player, you can do so in your markdown. Just use HTML to create your own layout.
+
+<img alt="Screenshot of full layout" src="./screenshots/layouts/full.png" style="max-width: 50%">
+
+Usage:
+
+```
+---
+layout: full
+---
+```
+
 ### Intro
 Use a single slide per speaker to help introduce them.
 
@@ -117,14 +130,14 @@ Usage:
 ```
 
 ### ProfileCard
-The this component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`). 
+The this component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
 
 Usage:
 
 ```
-<ProfileCard 
-  firstName="John" 
-  lastName="Doe" 
+<ProfileCard
+  firstName="John"
+  lastName="Doe"
   functionTitle="Front-end developer"
   email="john.doe@iodigital.com"
   telephone="06-12345678"
