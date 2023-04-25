@@ -112,6 +112,33 @@ cite: https://en.wikipedia.org/wiki/Brand
 Products are made in a factory but brands are created in the mind
 ```
 
+### Two-cols 
+As the name suggest, this layout divides the page in two columns (left / right). By default the content is placed in the left column and with the `::right::` slot you're able to place content in the right column.
+
+<img alt="Screenshot of two cols layout" src="./screenshots/layouts/two-cols.png" style="max-width: 50%">
+ 
+Usage:
+```
+---
+layout: two-cols
+division: 70/30
+---
+
+# Left side title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+
+::right::
+
+# Right side title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- First item
+- Second item
+- Third item
+
+```
+
 ## Components
 
 This theme provides the following components:

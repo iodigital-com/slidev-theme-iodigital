@@ -217,3 +217,24 @@ cite: https://en.wikipedia.org/wiki/Brand
 ---
 
 Products are made in a factory but brands are created in the mind
+
+---
+layout: two-cols
+division: "40/60"
+---
+# left
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+
+Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat. 
+
+Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
+
+::right::
+# right
+Integer convallis dignissim nunc et hendrerit. Proin tempus, eros sed tristique fringilla:
+
+- Sapien leo 
+- Vulputate nisl 
+- Pulvinar suscipit 
+- Eros augue nec tortor. 
+
