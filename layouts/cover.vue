@@ -1,5 +1,5 @@
 <script setup>
-import BaseLayout from './base-layout.vue';
+import BaseLayout from '../components/base-layout.vue';
 import IconIoLogo from '~icons/io/logo'; // TODO: remove and fix auto imports
 
 const props = defineProps({

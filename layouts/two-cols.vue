@@ -1,5 +1,5 @@
 <script setup>
-	import BaseLayout from './base-layout.vue';
+	import BaseLayout from '../components/base-layout.vue';
 	const props = defineProps({
 		division: {
 			type: String,
