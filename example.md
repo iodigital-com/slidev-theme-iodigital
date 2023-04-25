@@ -139,11 +139,11 @@ layout: full
   <p class="w-2/3 text-justify">
     You'll have waaaaaaaay more space to display larger content. This offsets the `default` layout which puts the title and optional subtitle on the left side and the content on the right side, divided equally. This layout shows your slide's title in full width. You are free to format your content however you want. By default it spans the full width and height of the available area. Set up columns if you want.
   </p>
-  <img class="w-1/3" src="beehive.jpg" alt="Picture of a bee on a honeycomb">
+  <img class="w-1/3" src="/beehive.jpg" alt="Picture of a bee on a honeycomb">
 </div>
 
 <div class="flex gap-8">
-  <img class="w-1/3" src="beekeeper.jpg">
+  <img class="w-1/3" src="/beekeeper.jpg">
   <p class="w-2/3 text-justify">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi pariatur necessitatibus ut adipisci vel ad, aperiam magni, id eaque at quae nisi quibusdam? Libero sint qui commodi voluptate atque. Aperiam, ex. Rerum iste ducimus sunt, omnis, nulla aliquam dignissimos ipsum ex quam architecto veniam ab nesciunt aut dolores deleniti quia voluptatem mollitia qui dicta, excepturi repellendus quaerat? Corrupti, vitae. Eos, suscipit ea voluptatum qui vero quibusdam fuga incidunt, culpa at quo, quam ipsam quia perferendis reiciendis tenetur quidem totam eligendi architecto sequi doloremque ex iste in asperiores! Delectus, laudantium.
   </p>
@@ -155,7 +155,7 @@ layout: full
 # Full size layout
 
 <div class="flex">
-  <div class="w-1/2 mr-4"><img src="amsterdam.webp" alt="Map of Amsterdam City Center in sepia"></div>
+  <div class="w-1/2 mr-4"><img src="/amsterdam.webp" alt="Map of Amsterdam City Center in sepia"></div>
   <div class="w-1/2 ml-4">
     Amsterdam die grote stad,<br>
     die is gebouwd op palen.<br>
