@@ -72,6 +72,19 @@ layout: full
 ---
 ```
 
+### Iframe / Iframe-left / Iframe-right
+This is the default sli.dev way to display an Iframe inside a slide. Make sure that you use the embed URL if it is provided. 
+
+<img alt="Screenshot of Iframe layout" src="./screenshots/layouts/iframe.png" style="max-width: 50%">
+
+Usage:
+
+```
+---
+layout: iframe / iframe-left / iframe-right
+---
+```
+
 ### Intro
 Use a single slide per speaker to help introduce them.
 
