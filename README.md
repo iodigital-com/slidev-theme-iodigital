@@ -82,6 +82,7 @@ Usage:
 ```
 ---
 layout: iframe / iframe-left / iframe-right
+url: https://www.youtube.com/embed/dQw4w9WgXcQ
 ---
 ```
 
