@@ -37,6 +37,14 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 <br>
 
 Read more about [Why Slidev?](https://sli.dev/guide/why)
+
+---
+layout: image-right
+image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+---
+# Table of content
+<Toc />
+
 ---
 layout: intro
 image: https://www.davebitter.com/img/dave.jpg

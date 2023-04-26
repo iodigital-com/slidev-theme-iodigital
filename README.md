@@ -157,7 +157,7 @@ Usage:
 ```
 
 ### ProfileCard
-The this component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
+This component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
 
 Usage:
 
@@ -184,6 +184,23 @@ Usage:
 <icon-mdi-account></icon-mdi-account>
 <IconIoLogo />
 <IconIoLogo></IconIoLogo>
+```
+
+### Table of content
+
+This component can be used to create a table of content based on the headings from every the slide.
+
+<img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
+
+Usage: 
+
+```
+---
+layout: image-right (this can be any layout)
+image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+---
+# Table of content
+<Toc />
 ```
 
 ## Contributing
