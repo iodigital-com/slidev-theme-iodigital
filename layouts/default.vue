@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import BaseLayout from './base-layout.vue';
+import BaseLayout from '../components/base-layout.vue';
 
 const baseRef = ref();
 let h1Height = ref(0);
