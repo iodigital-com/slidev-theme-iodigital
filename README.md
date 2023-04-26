@@ -59,6 +59,11 @@ image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
 ```
 
+### End
+The end slide is automatically placed at the end by sli.dev. You don't have to add it yourself.
+
+<img alt="Screenshot of end layout" src="./screenshots/layouts/end.png" style="max-width: 50%">
+
 ### Full
 A full size layout. Title on top. Content can be anything you want. If you want to separate your content into columns, have floating images or a large video player, you can do so in your markdown. Just use HTML to create your own layout.
 
