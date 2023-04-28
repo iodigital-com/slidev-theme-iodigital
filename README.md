@@ -57,7 +57,6 @@ Usage:
 layout: cover
 image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
-```
 
 ### Full
 A full size layout. Title on top. Content can be anything you want. If you want to separate your content into columns, have floating images or a large video player, you can do so in your markdown. Just use HTML to create your own layout.
