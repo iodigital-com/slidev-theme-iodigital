@@ -12,7 +12,7 @@ const classNames = computed(() => props.layout);
 </script>
 
 <template>
-    <section class="slidev-layout" :class="classNames">
-        <slot></slot>
-    </section>
+	<section class="slidev-layout" :class="classNames">
+		<slot />
+	</section>
 </template>
