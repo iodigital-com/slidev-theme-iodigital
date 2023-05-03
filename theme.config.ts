@@ -1,3 +1,9 @@
+export enum ChapterColor {
+    ORANGE = 'orange',
+    BLUE = 'blue',
+    PURPLE = 'purple',
+};
+
 export type Network = {
     /**
      * Base URL of the network
@@ -19,7 +25,8 @@ export type Network = {
 declare const IconMdiGithubBox, IconMdiTwitterBox, IconMdiLinkedin, IconIoLogo;
 
 /**
- * Record of which social networks are available in the theme. These are used by SocialLink component
+ * Record of which social networks are available in the theme. These are mainly
+ * used by the SocialLink component
  */
 export const networks: Record<string, Network> = {
     github: {
@@ -46,32 +53,13 @@ export const networks: Record<string, Network> = {
  */
 export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
 
-export const getSectionTitleGetter = ($slidev: any, rawRoutes: any[]) => () => {
-    if (rawRoutes.length) {
-        for (let i = $slidev.nav.currentPage - 1; i > 0; i--) {
-            const { meta } = rawRoutes[i];
-            const section = meta.section ?? true;
+/**
+ * Chapters in a slide deck belong to a certain color. This map represents the
+ * color which belongs to the chapter
+ */
+export const chapterColors: Record<string, ChapterColor> = {
+    introduction: ChapterColor.ORANGE,
+    story: ChapterColor.BLUE,
+    conclusion: ChapterColor.PURPLE,
+};
 
-            if (section === false) {
-                // Quit using sections. Use the fall back
-                break;
-            }
-
-            if (meta.layout !== 'section') {
-                // Not a section, on to the previous slide
-                continue;
-            }
-            if (section === true && meta.slide?.title) {
-                // Use the current slide’s title
-                return meta.slide?.title;
-            }
-
-            if (typeof section === 'string') {
-                // Override the section title with a custom one
-                return section;
-            }
-        }
-    }
-    // Default value
-    return $slidev.configs.title;
-}

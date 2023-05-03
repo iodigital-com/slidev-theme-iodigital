@@ -47,40 +47,15 @@
       @apply mt-2;
     }
   }
-
-  &:not(.cover) {
-    &.bg-orange, &.bg-blend-orange {
-      @apply text-white;
-      background-color: var(--slidev-theme-primary-orange);
-    }
-    &.bg-blue, &.bg-blend-blue {
-      @apply text-white;
-      background-color: var(--slidev-theme-primary-blue);
-    }
-    &.bg-purple, &.bg-blend-purple {
-      @apply text-white;
-      background-color: var(--slidev-theme-primary-purple);
-    }
-
-    &.bg-blend-orange {
-      background: url('/blends/orange.jpg') no-repeat center center;
-    }
-    &.bg-blend-blue {
-      background: url('/blends/blue.jpg') no-repeat center center;
-    }
-    &.bg-blend-purple {
-      background: url('/blends/purple.jpg') no-repeat center center;
-    }
-  }
 }
 
 .footer:has(+ #slideshow > :is(
-  .bg-orange, 
-  .bg-blend-orange, 
-  .bg-blue, 
-  .bg-blend-blue, 
-  .bg-purple, 
-  .bg-blend-purple
+  .bg-orange,
+  .bg-blend-orange,
+  .bg-blue,
+  .bg-blend-blue,
+  .bg-purple,
+  .bg-blend-purple,
   ):not([style*="display: none;"]) /* The not selector is used to detect if the selector matches the current slide */
 ) {
   @apply text-white;
