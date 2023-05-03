@@ -17,12 +17,7 @@ Presentation slides for developers
   <dt>Image</dt>
   <dd>Be sure to pick an image which has it's subject in the frame</dd>
 </dl>
----
-layout: default
----
-# default layout
 
-amazing content
 ---
 layout: section
 ---
@@ -151,7 +146,7 @@ image: https://avatars.githubusercontent.com/u/6022537?v=4
 - <SocialLink network="twitter" handle="arnokoehler" />
 
 ---
-layout: section
+layout: full
 ---
 # A full size layout
 
@@ -168,6 +163,7 @@ layout: section
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi pariatur necessitatibus ut adipisci vel ad, aperiam magni, id eaque at quae nisi quibusdam? Libero sint qui commodi voluptate atque. Aperiam, ex. Rerum iste ducimus sunt, omnis, nulla aliquam dignissimos ipsum ex quam architecto veniam ab nesciunt aut dolores deleniti quia voluptatem mollitia qui dicta, excepturi repellendus quaerat? Corrupti, vitae. Eos, suscipit ea voluptatum qui vero quibusdam fuga incidunt, culpa at quo, quam ipsam quia perferendis reiciendis tenetur quidem totam eligendi architecto sequi doloremque ex iste in asperiores! Delectus, laudantium.
   </p>
 </div>
+
 
 ---
 layout: full

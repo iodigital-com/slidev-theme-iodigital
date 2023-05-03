@@ -1,26 +1,27 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { getAllChapters, getAllSections, getChapterColor, getCurrentChapter, getCurrentSection } from '../theme.utils';
+import { getAllChapters, getChapterColor, getCurrentChapter } from '../theme.utils';
 import BaseLayout from './base-layout.vue';
 import rawRoutes from '/@slidev/routes';
 
-const sections = getAllSections(rawRoutes);
-const chapters = getAllChapters(rawRoutes);
-const section = getCurrentSection($slidev.nav.currentPage, sections);
-const chapter = getCurrentChapter($slidev.nav.currentPage, chapters);
-
 // We go a maximum of 3 levels deep. Subtract 1 as JS arrays are 0-based
-const level = Math.max(0, Math.min(3, (section?.meta?.slide?.frontmatter?.level ?? 1) - 1));
+const level = computed(() => ($slidev.nav.currentRoute.meta?.slide?.frontmatter?.level ?? 1) - 1);
 
-// console.log("🚀 ~ title:", level, $slidev.nav.currentRoute.meta?.slide?.title);
-const color = getChapterColor(chapter.meta.chapter);
-const variants = [`bg-blend-${color}`, `bg-${color}`, `bg-sub-${color}`];
-const bg = computed(() => variants[($slidev.nav.currentRoute.meta?.slide?.frontmatter?.level ?? 1) - 1])
+const backgroundVariant = computed(() => {
+    const chapters = getAllChapters(rawRoutes);
+    const chapter = getCurrentChapter($slidev.nav.currentPage, chapters);
+
+    // console.log("🚀 ~ title:", level, $slidev.nav.currentRoute.meta?.slide?.title);
+    const color = getChapterColor(chapter.meta.chapter);
+    const variants = [`bg-blend-${color}`, `bg-${color}`, `bg-sub-${color}`];
+    
+    return variants[level.value];
+})
 </script>
 
 <template>
-<base-layout layout="section" :class="bg">
+<base-layout layout="section" :class="backgroundVariant">
     <IconIoLogo class="logo" v-if="level < 2" />
     <div class="content">
         <slot />
