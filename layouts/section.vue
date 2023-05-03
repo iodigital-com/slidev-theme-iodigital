@@ -6,32 +6,17 @@ import BaseLayout from './base-layout.vue';
 import rawRoutes from '/@slidev/routes';
 
 const sections = getAllSections(rawRoutes);
-// console.log("🚀 ~ sections:", sections)
-// console.log(1);
 const chapters = getAllChapters(rawRoutes);
-// console.log(2);
 const section = getCurrentSection($slidev.nav.currentPage, sections);
-// console.log(3);
-// console.log("🚀 ~ section:", {
-//     title: section.meta?.slide?.title,
-//     currentPage: $slidev.nav.currentPage,
-//     currentSlideId: $slidev.nav.currentSlideId,
-//     section: section,
-// })
-// console.log(4);
 const chapter = getCurrentChapter($slidev.nav.currentPage, chapters);
-// console.log(5);
 
 // We go a maximum of 3 levels deep. Subtract 1 as JS arrays are 0-based
-const level = Math.max(0, Math.min(3, (section.meta?.level ?? section.meta?.slide?.level ?? 1) - 1));
-// console.log(6);
+const level = Math.max(0, Math.min(3, (section?.meta?.slide?.frontmatter?.level ?? 1) - 1));
+
 // console.log("🚀 ~ title:", level, $slidev.nav.currentRoute.meta?.slide?.title);
-// console.log(7);
 const color = getChapterColor(chapter.meta.chapter);
-// console.log(8);
 const variants = [`bg-blend-${color}`, `bg-${color}`, `bg-sub-${color}`];
-// console.log(9);
-const bg = variants[level];
+const bg = computed(() => variants[($slidev.nav.currentRoute.meta?.slide?.frontmatter?.level ?? 1) - 1])
 </script>
 
 <template>
