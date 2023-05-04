@@ -123,6 +123,21 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>down</kbd> | next slide |
 
 ---
+layout: image
+image: ./beehive.jpg
+variant: full
+---
+
+# Full image with overlaying title over 3 lines
+---
+layout: image
+image: ./beehive.jpg
+variant: box
+---
+
+# Full image with overlaying title in a black box
+
+---
 layout: intro
 image: https://avatars.githubusercontent.com/u/6022537?v=4
 ---
@@ -231,9 +246,9 @@ layout: two-cols
 division: "40/60"
 ---
 # left
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper.
 
-Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat. 
+Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat.
 
 Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 
@@ -241,7 +256,7 @@ Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 # right
 Integer convallis dignissim nunc et hendrerit. Proin tempus, eros sed tristique fringilla:
 
-- Sapien leo 
-- Vulputate nisl 
-- Pulvinar suscipit 
-- Eros augue nec tortor. 
+- Sapien leo
+- Vulputate nisl
+- Pulvinar suscipit
+- Eros augue nec tortor.

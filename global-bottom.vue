@@ -11,10 +11,13 @@ const cite = computed(() => {
 })
 
 const isFooterVisibile = computed(() => {
-    const isShowFooter = Boolean($slidev.configs.footer ?? true);
-    const isVisibleOnLayout = !footerLayoutBlacklist.includes($slidev.nav.currentLayout);
+    const currentLayout = $slidev.nav.currentLayout;
 
-    return isShowFooter && isVisibleOnLayout;
+    const isShowFooter = Boolean($slidev.configs.footer ?? true);
+    const isVisibleOnLayout = !footerLayoutBlacklist.includes(currentLayout);
+    const isFullImage = currentLayout === 'image' && $slidev.nav.currentRoute.meta?.variant !== 'header';
+
+    return isShowFooter && isVisibleOnLayout && !isFullImage;
 });
 const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
 </script>
