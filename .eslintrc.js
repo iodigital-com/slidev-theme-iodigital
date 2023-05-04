@@ -10,7 +10,7 @@ module.exports = {
 	rules: {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/html-quotes': ['error', 'double'],
-		'vue/max-attributes-per-line': 'off',
+		'vue/max-attributes-per-line': 4,
 		'vue/multi-word-component-names': 'off',
 		'vue/no-unused-vars': 'error',
 		'object-curly-spacing': ['error', 'always'],
