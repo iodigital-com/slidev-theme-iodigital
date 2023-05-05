@@ -1,13 +1,3 @@
-<script setup>
-	import BaseLayout from '../components/base-layout.vue';
-
-	const props = defineProps({
-		author: String,
-		source: String,
-		cite: String,
-	});
-</script>
-
 <template>
 	<base-layout layout="statement">
 		<figure class="quote">
@@ -18,6 +8,16 @@
 		</figure>
 	</base-layout>
 </template>
+
+<script setup>
+	import BaseLayout from '../components/BaseLayout.vue';
+
+	const props = defineProps({
+		author: String,
+		source: String,
+		cite: String,
+	});
+</script>
 
 <style scoped>
 	.quote {
@@ -38,6 +38,6 @@
 			}
 		}
 
-		
+
 	}
 </style>

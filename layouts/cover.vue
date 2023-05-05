@@ -1,15 +1,3 @@
-<script setup>
-import BaseLayout from '../components/base-layout.vue';
-import IconIoLogo from '~icons/io/logo'; // TODO: remove and fix auto imports
-
-const props = defineProps({
-    image: {
-        type: String,
-        required: true,
-    },
-});
-</script>
-
 <template>
 	<base-layout layout="cover">
 		<div class="background">
@@ -26,6 +14,18 @@ const props = defineProps({
 		</div>
 	</base-layout>
 </template>
+
+<script setup>
+import IconIoLogo from '~icons/io/logo';
+import BaseLayout from '../components/BaseLayout.vue';
+
+const props = defineProps({
+    image: {
+        type: String,
+        required: true,
+    },
+});
+</script>
 
 <style scoped>
 .cover {
