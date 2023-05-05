@@ -2,7 +2,7 @@ export enum ChapterColor {
     ORANGE = 'orange',
     BLUE = 'blue',
     PURPLE = 'purple',
-};
+}
 
 export type Network = {
     /**

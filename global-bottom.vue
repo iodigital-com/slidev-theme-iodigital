@@ -47,6 +47,7 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
 	>
 		<div class="flex items-end gap-x-8">
 			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
+			<!-- eslint-disable-next-line vue/no-v-html -->
 			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle" />
 		</div>
 		<div class="flex row items-end">

@@ -1,6 +1,6 @@
 import { ChapterColor, chapterColors } from './theme.config';
 
-export const memoize = (fn: Function) => {
+export const memoize = <T = unknown>(fn: (...args: any[]) => T) => {
     const cache = new Map();
 
     return (...args) => {
