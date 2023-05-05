@@ -39,6 +39,14 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 <br>
 
 Read more about [Why Slidev?](https://sli.dev/guide/why)
+
+---
+layout: image-right
+image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+---
+# Table of content
+<Toc />
+
 ---
 layout: section
 level: 2
@@ -233,3 +241,23 @@ cite: https://en.wikipedia.org/wiki/Brand
 ---
 
 Products are made in a factory but brands are created in the mind
+
+---
+layout: two-cols
+division: "40/60"
+---
+# left
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+
+Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat. 
+
+Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
+
+::right::
+# right
+Integer convallis dignissim nunc et hendrerit. Proin tempus, eros sed tristique fringilla:
+
+- Sapien leo 
+- Vulputate nisl 
+- Pulvinar suscipit 
+- Eros augue nec tortor. 

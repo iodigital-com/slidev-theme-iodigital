@@ -6,7 +6,7 @@ import { getAllSections, getSectionTitleGetter } from './theme.utils';
 import rawRoutes from '/@slidev/routes';
 
 const cite = computed(() => {
-    if ($slidev.nav.currentLayout !== "quote") return null;
+    if ($slidev.nav.currentLayout !== 'quote') return null;
 
     return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
 })
@@ -41,21 +41,21 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
 </script>
 
 <template>
-    <footer
-        v-if="isFooterVisible"
-        class="footer"
-    >
-        <div class="flex items-end gap-x-8">
-            <span class="page-count">{{ $slidev.nav.currentPage }}</span>
-            <span class="section-title" v-html="latestSectionTitleOrPresentationTitle"></span>
-        </div>
-        <div class="flex row items-end">
-            <div v-if="!!cite" class="mr-4">
-                <a :href="cite">{{ cite }}</a>
-            </div>
-            <IconIoLogo class="logo" v-if="isFooterIconVisible" />
-        </div>
-    </footer>
+	<footer
+		v-if="isFooterVisible"
+		class="footer"
+	>
+		<div class="flex items-end gap-x-8">
+			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
+			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle"></span>
+		</div>
+		<div class="flex row items-end">
+			<div v-if="!!cite" class="mr-4">
+				<a :href="cite">{{ cite }}</a>
+			</div>
+			<IconIoLogo class="logo" v-if="isFooterIconVisible" />
+		</div>
+	</footer>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup>
-import BaseLayout from './base-layout.vue';
+import BaseLayout from '../components/base-layout.vue';
 import IconIoLogo from '~icons/io/logo'; // TODO: remove and fix auto imports
 
 const props = defineProps({
@@ -11,18 +11,20 @@ const props = defineProps({
 </script>
 
 <template>
-    <base-layout layout="cover">
-        <div class="background"><img :src="props.image"></div>
-        <div class="flex flex-col">
-            <div class="w-full">
-                <IconIoLogo class="w-24 h-24" />
-            </div>
-            <div class="content">
-                <div class="shape-placeholder"></div>
-                <slot />
-            </div>
-        </div>
-    </base-layout>
+	<base-layout layout="cover">
+		<div class="background">
+			<img :src="props.image">
+		</div>
+		<div class="flex flex-col">
+			<div class="w-full">
+				<IconIoLogo class="w-24 h-24" />
+			</div>
+			<div class="content">
+				<div class="shape-placeholder" />
+				<slot />
+			</div>
+		</div>
+	</base-layout>
 </template>
 
 <style scoped>

@@ -57,7 +57,6 @@ Usage:
 layout: cover
 image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
-```
 
 ### Full
 A full size layout. Title on top. Content can be anything you want. If you want to separate your content into columns, have floating images or a large video player, you can do so in your markdown. Just use HTML to create your own layout.
@@ -69,6 +68,20 @@ Usage:
 ```
 ---
 layout: full
+---
+```
+
+### Iframe / Iframe-left / Iframe-right
+This is the default sli.dev way to display an Iframe inside a slide. Make sure that you use the embed URL if it is provided. 
+
+<img alt="Screenshot of Iframe layout" src="./screenshots/layouts/iframe.png" style="max-width: 50%">
+
+Usage:
+
+```
+---
+layout: iframe / iframe-left / iframe-right
+url: https://www.youtube.com/embed/dQw4w9WgXcQ
 ---
 ```
 
@@ -112,6 +125,33 @@ cite: https://en.wikipedia.org/wiki/Brand
 Products are made in a factory but brands are created in the mind
 ```
 
+### Two-cols 
+As the name suggest, this layout divides the page in two columns (left / right). By default the content is placed in the left column and with the `::right::` slot you're able to place content in the right column.
+
+<img alt="Screenshot of two cols layout" src="./screenshots/layouts/two-cols.png" style="max-width: 50%">
+ 
+Usage:
+```
+---
+layout: two-cols
+division: 70/30
+---
+
+# Left side title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+
+::right::
+
+# Right side title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- First item
+- Second item
+- Third item
+
+```
+
 ## Components
 
 This theme provides the following components:
@@ -130,7 +170,7 @@ Usage:
 ```
 
 ### ProfileCard
-The this component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
+This component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
 
 Usage:
 
@@ -157,6 +197,23 @@ Usage:
 <icon-mdi-account></icon-mdi-account>
 <IconIoLogo />
 <IconIoLogo></IconIoLogo>
+```
+
+### Table of content
+
+This component can be used to create a table of content based on the headings from every the slide.
+
+<img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
+
+Usage: 
+
+```
+---
+layout: image-right (this can be any layout)
+image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+---
+# Table of content
+<Toc />
 ```
 
 ## Contributing
