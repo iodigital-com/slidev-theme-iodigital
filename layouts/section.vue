@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
 import { getAllChapters, getChapterColor, getCurrentChapter } from '../theme.utils';
-import BaseLayout from './base-layout.vue';
+import BaseLayout from '../components/base-layout.vue';
 import rawRoutes from '/@slidev/routes';
 
 // We go a maximum of 3 levels deep. Subtract 1 as JS arrays are 0-based
@@ -12,21 +12,20 @@ const backgroundVariant = computed(() => {
     const chapters = getAllChapters(rawRoutes);
     const chapter = getCurrentChapter($slidev.nav.currentPage, chapters);
 
-    // console.log("🚀 ~ title:", level, $slidev.nav.currentRoute.meta?.slide?.title);
     const color = getChapterColor(chapter.meta.chapter);
     const variants = [`bg-blend-${color}`, `bg-${color}`, `bg-sub-${color}`];
-    
+
     return variants[level.value];
 })
 </script>
 
 <template>
-<base-layout layout="section" :class="backgroundVariant">
-    <IconIoLogo class="logo" v-if="level < 2" />
-    <div class="content">
-        <slot />
-    </div>
-</base-layout>
+	<base-layout layout="section" :class="backgroundVariant">
+		<IconIoLogo v-if="level < 2" class="logo" />
+		<div class="content">
+			<slot />
+		</div>
+	</base-layout>
 </template>
 
 <style scoped>

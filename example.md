@@ -21,7 +21,7 @@ Presentation slides for developers
 ---
 layout: section
 ---
-# Lorem, ipsum dolor sit amet consectetur <em>adipisicing elit</em>. Nulla officiis id quam inventore magni blanditiis ipsam iusto vel quasi quaerat natus, voluptatibus esse! Aut illum reprehenderit dicta error quibusdam asperiores.
+# Amazing new section
 
 ## Level 1 (implicit) - blend
 
@@ -61,7 +61,7 @@ level: 3
 ## Level 3 - light
 ---
 layout: intro
-image: https://www.davebitter.com/img/dave.jpg
+image: https://www.davebitter.com/img/dave.png
 ---
 # Dave Bitter
 
@@ -247,9 +247,9 @@ layout: two-cols
 division: "40/60"
 ---
 # left
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper.
 
-Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat. 
+Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat.
 
 Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 
@@ -257,7 +257,7 @@ Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 # right
 Integer convallis dignissim nunc et hendrerit. Proin tempus, eros sed tristique fringilla:
 
-- Sapien leo 
-- Vulputate nisl 
-- Pulvinar suscipit 
-- Eros augue nec tortor. 
+- Sapien leo
+- Vulputate nisl
+- Pulvinar suscipit
+- Eros augue nec tortor.

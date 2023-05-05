@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
 import { footerLayoutBlacklist } from './theme.config';
-import { getAllSections, getSectionTitleGetter } from './theme.utils';
+import { getAllSections, getCurrentSection, getSectionTitleGetter } from './theme.utils';
 import rawRoutes from '/@slidev/routes';
 
 const cite = computed(() => {
@@ -14,9 +14,9 @@ const cite = computed(() => {
 const isSubSubSection = () => {
     if ($slidev.nav.currentLayout === 'section') {
         const sections = getAllSections(rawRoutes);
-        const section = sections.find(s => s.meta.slide.id === $slidev.nav.currentSlideId);
+        const section = getCurrentSection($slidev.nav.currentPage, sections);
 
-        return section.meta.level === 3;
+        return section?.meta?.level === 3;
     }
     return false;
 }
@@ -31,7 +31,7 @@ const isFooterVisible = computed(() => {
 });
 
 const isFooterIconVisible = computed(() => {
-    if (!isFooterVisible) {
+    if (!isFooterVisible.value) {
         return false;
     }
 
@@ -47,13 +47,13 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
 	>
 		<div class="flex items-end gap-x-8">
 			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
-			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle"></span>
+			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle" />
 		</div>
 		<div class="flex row items-end">
 			<div v-if="!!cite" class="mr-4">
 				<a :href="cite">{{ cite }}</a>
 			</div>
-			<IconIoLogo class="logo" v-if="isFooterIconVisible" />
+			<IconIoLogo v-if="isFooterIconVisible" class="logo" />
 		</div>
 	</footer>
 </template>
