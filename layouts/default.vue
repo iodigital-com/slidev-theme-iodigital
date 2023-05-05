@@ -1,6 +1,14 @@
+<template>
+	<base-layout layout="default" :style="style">
+		<div ref="baseRef" class="base">
+			<slot />
+		</div>
+	</base-layout>
+</template>
+
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import BaseLayout from '../components/base-layout.vue';
+import BaseLayout from '../components/BaseLayout.vue';
 
 const baseRef = ref();
 let h1Height = ref(0);
@@ -32,14 +40,6 @@ const style = computed(() => ({
 }));
 
 </script>
-
-<template>
-	<base-layout layout="default" :style="style">
-		<div ref="baseRef" class="base">
-			<slot />
-		</div>
-	</base-layout>
-</template>
 
 <style scoped>
 /*

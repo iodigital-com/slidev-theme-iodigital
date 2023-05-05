@@ -1,3 +1,9 @@
+<template>
+	<section class="slidev-layout" :class="classNames">
+		<slot />
+	</section>
+</template>
+
 <script setup>
 import { computed } from 'vue';
 
@@ -10,9 +16,3 @@ const props = defineProps({
 
 const classNames = computed(() => props.layout);
 </script>
-
-<template>
-	<section class="slidev-layout" :class="classNames">
-		<slot />
-	</section>
-</template>

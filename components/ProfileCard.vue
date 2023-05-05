@@ -1,3 +1,15 @@
+<template>
+	<div class="card">
+		<img v-if="props.image" :src="props.image" :alt="imageAlt">
+		<address class="card-body">
+			<p>{{ name }}</p>
+			<p>{{ props.functionTitle }}</p>
+			<p>{{ props.email }}</p>
+			<p>{{ props.telephone }}</p>
+		</address>
+	</div>
+</template>
+
 <script setup>
 
 	const props = defineProps({
@@ -18,18 +30,6 @@
 	const name = `${props.firstName} ${props.lastName}`;
 	const imageAlt = `${name}'s profile picture`;
 </script>
-
-<template>
-	<div class="card">
-		<img v-if="props.image" :src="props.image" :alt="imageAlt">
-		<address class="card-body">
-			<p>{{ name }}</p>
-			<p>{{ props.functionTitle }}</p>
-			<p>{{ props.email }}</p>
-			<p>{{ props.telephone }}</p>
-		</address>
-	</div>
-</template>
 
 <style scoped>
 	.card {

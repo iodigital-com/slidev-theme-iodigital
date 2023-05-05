@@ -1,7 +1,3 @@
-<script setup>
-import IconIoLogo from '~icons/io/logo';	
-</script>
-
 <template>
 	<div class="grid slidev-layout bg-blend-purple text-center">
 		<IconIoLogo width="80" height="80" class="logo absolute left-[56px] top-[40px]" />
@@ -10,6 +6,10 @@ import IconIoLogo from '~icons/io/logo';
 		</h1>
 	</div>
 </template>
+
+<script setup>
+import IconIoLogo from '~icons/io/logo';
+</script>
 
 <style>
 	.title {
