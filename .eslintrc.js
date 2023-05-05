@@ -1,9 +1,12 @@
 module.exports = {
-    'ignorePatterns': ['/dist/', 'auto-imports.d.ts', 'theme.config.ts'],
+    ignorePatterns: ['/dist/'],
 	env: {
 		node: true,
 		browser: true
 	},
+    parserOptions: {
+        parser: '@typescript-eslint/parser',
+    },
 	extends: [
         'eslint:recommended',
 		'plugin:vue/vue3-recommended'
