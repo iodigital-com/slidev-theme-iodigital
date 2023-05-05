@@ -9,6 +9,7 @@ module.exports = {
     },
 	extends: [
         'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended'
 	],
 	rules: {
@@ -28,6 +29,9 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 		'quotes': ['error', 'single'],
 		'space-before-blocks': ['error', 'always'],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-explicit-any': 'off'
 	},
     globals: {
         '$slidev': 'readonly'
