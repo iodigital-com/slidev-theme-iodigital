@@ -34,11 +34,11 @@ const style = computed(() => ({
 </script>
 
 <template>
-    <base-layout layout="default" :style="style">
-        <div class="base" ref="baseRef">
-            <slot />
-        </div>
-    </base-layout>
+	<base-layout layout="default" :style="style">
+		<div ref="baseRef" class="base">
+			<slot />
+		</div>
+	</base-layout>
 </template>
 
 <style scoped>

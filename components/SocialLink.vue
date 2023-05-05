@@ -18,10 +18,10 @@ const networkHandle = computed(() => `${handlePrefix ?? ''}${props.handle}`);
 </script>
 
 <template>
-    <a :href="`${networkBase}/${handle}`" target="_blank" rel="noopener noreferrer" >
-        <component :is="icon" class="icon" />
-        {{ networkHandle }}
-    </a>
+	<a :href="`${networkBase}/${handle}`" target="_blank" rel="noopener noreferrer">
+		<component :is="icon" class="icon" />
+		{{ networkHandle }}
+	</a>
 </template>
 
 <style scoped>

@@ -3,12 +3,12 @@
 	const props = defineProps({
 		division: {
 			type: String,
-			default: "50/50",
+			default: '50/50',
 			validator: (value) => (/^([1-9]\d*)\/([1-9]\d*)$/).test(value)
 		},
 	});
 
-	const division = props.division.split('/').map(item => `${item}fr`).join(" ");
+	const division = props.division.split('/').map(item => `${item}fr`).join(' ');
 </script>
 
 <template>

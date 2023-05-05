@@ -21,7 +21,7 @@
 
 <template>
 	<div class="card">
-		<img v-if="props.image" :src="props.image" :alt="imageAlt" >
+		<img v-if="props.image" :src="props.image" :alt="imageAlt">
 		<address class="card-body">
 			<p>{{ name }}</p>
 			<p>{{ props.functionTitle }}</p>

@@ -10,10 +10,12 @@
 
 <template>
 	<base-layout layout="statement">
-	<figure class="quote">
-		<blockquote><slot /></blockquote>
-		<figcaption v-if="props.author">- {{ props.author }}<cite v-if="props.source">, {{ props.source }}</cite></figcaption>
-	</figure>
+		<figure class="quote">
+			<blockquote><slot /></blockquote>
+			<figcaption v-if="props.author">
+				- {{ props.author }}<cite v-if="props.source">, {{ props.source }}</cite>
+			</figcaption>
+		</figure>
 	</base-layout>
 </template>
 
