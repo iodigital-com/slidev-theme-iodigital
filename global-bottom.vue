@@ -11,15 +11,23 @@ const cite = computed(() => {
     return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
 })
 
-const isSubSubSection = () => {
+const isSubSection = () => {
     if ($slidev.nav.currentLayout === 'section') {
         const sections = getAllSections(rawRoutes);
-        const section = getCurrentSection($slidev.nav.currentPage, sections);
+        const section = getCurrentSection($slidev.nav.currentSlideId, sections);
 
         return section?.meta?.level === 3;
     }
     return false;
 }
+
+const isFooterIconVisible = computed(() => {
+    if (!isFooterVisible.value) {
+        return false;
+    }
+
+    return isSubSection();
+});
 
 const isFooterVisible = computed(() => {
     const { currentLayout } = $slidev.nav;
@@ -27,22 +35,14 @@ const isFooterVisible = computed(() => {
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
     const isVisibleOnLayout = !footerLayoutBlacklist.includes(currentLayout);
 
-    return isShowFooter && isVisibleOnLayout || isSubSubSection();
-});
-
-const isFooterIconVisible = computed(() => {
-    if (!isFooterVisible.value) {
-        return false;
-    }
-
-    return isSubSubSection();
+    return isShowFooter && isVisibleOnLayout;
 });
 const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
 </script>
 
 <template>
 	<footer
-		v-if="isFooterVisible"
+		v-if="isFooterVisible || isFooterIconVisible"
 		class="footer"
 	>
 		<div class="flex items-end gap-x-8">
@@ -64,7 +64,7 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
     @apply absolute bottom-0 right-0 left-0 z-50 pb-4 px-14;
     @apply flex justify-between;
     @apply text-xs;
-    @apply transition-[color] duration-200 ease-out
+    @apply transition-[color] duration-200 ease-out;
 }
 
 .section-title {
