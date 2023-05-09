@@ -1,5 +1,5 @@
 <template>
-	<base-layout layout="cover">
+	<BaseLayout layout="cover">
 		<div class="background">
 			<img :src="props.image">
 		</div>
@@ -12,7 +12,7 @@
 				<slot />
 			</div>
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>

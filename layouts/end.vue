@@ -1,11 +1,11 @@
 <template>
-	<base-layout layout="end" class="bg-blend-purple">
+	<BaseLayout layout="end" class="bg-blend-purple">
 		<IconIoLogo class="logo" />
 		<h1 class="title">
 			Together we see<br>
 			<em>Infinite Opportunities</em>
 		</h1>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>
