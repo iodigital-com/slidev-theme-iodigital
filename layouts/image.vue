@@ -24,11 +24,11 @@ const style = computed(() => ({
 </script>
 
 <template>
-	<base-layout layout="image" :class="`image--${props.variant}`" :style="style">
+	<BaseLayout layout="image" :class="`image--${props.variant}`" :style="style">
 		<div class="content">
 			<slot />
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <style scoped>

@@ -1,12 +1,12 @@
 <template>
-	<base-layout layout="statement">
+	<BaseLayout layout="statement">
 		<figure class="quote">
 			<blockquote><slot /></blockquote>
 			<figcaption v-if="props.author">
 				- {{ props.author }}<cite v-if="props.source">, {{ props.source }}</cite>
 			</figcaption>
 		</figure>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>

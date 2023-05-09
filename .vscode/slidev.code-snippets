@@ -19,15 +19,15 @@
 		"prefix": "layout",
 		"isFileTemplate": true,
 		"body": [
-			"<script setup>",
-			"import BaseLayout from '../components/base-layout.vue';",
-			"</script>",
-			"",
 			"<template>",
-			"<base-layout layout=\"$TM_FILENAME_BASE\">",
-			"\t$0",
-			"</base-layout>",
+			"\t<BaseLayout layout=\"$TM_FILENAME_BASE\">",
+			"\t\t$0",
+			"\t</BaseLayout>",
 			"</template>",
+			"",
+			"<script setup>",
+			"import BaseLayout from '../components/BaseLayout.vue';",
+			"</script>",
 			""
 		]
 	}

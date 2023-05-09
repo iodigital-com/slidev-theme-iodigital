@@ -20,12 +20,12 @@ const backgroundVariant = computed(() => {
 </script>
 
 <template>
-	<base-layout layout="section" :class="backgroundVariant">
+	<BaseLayout layout="section" :class="backgroundVariant">
 		<IconIoLogo v-if="level < 2" class="logo" />
 		<div class="content">
 			<slot />
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <style scoped>

@@ -1,9 +1,9 @@
 <template>
-	<base-layout layout="default" :style="style">
+	<BaseLayout layout="default" :style="style">
 		<div ref="baseRef" class="base">
 			<slot />
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>
