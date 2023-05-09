@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
 import { getAllChapters, getChapterColor, getCurrentChapter } from '../theme.utils';
-import BaseLayout from '../components/base-layout.vue';
+import BaseLayout from '../components/BaseLayout.vue';
 import rawRoutes from '/@slidev/routes';
 
 // We go a maximum of 3 levels deep. Subtract 1 as JS arrays are 0-based

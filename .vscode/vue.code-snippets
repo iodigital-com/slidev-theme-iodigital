@@ -1,0 +1,35 @@
+{
+    "Props": {
+        "scope": "javascript",
+        "prefix": "props",
+        "body": [
+            "const props = defineProps({",
+            "\t$0",
+            "});",
+        ],
+    },
+    "SFC script": {
+		"prefix": "scr",
+		"body": [
+			"<script setup>",
+			"$0",
+			"</script>",
+		]
+	},
+	"SFC template": {
+		"prefix": "tem",
+		"body": [
+			"<template>",
+			"$0",
+			"</template>",
+		]
+	},
+	"SFC style": {
+		"prefix": "sty",
+		"body": [
+			"<style scoped>",
+			"$0",
+			"</style>",
+		]
+	},
+}

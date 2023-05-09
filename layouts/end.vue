@@ -1,8 +1,3 @@
-<script setup>
-import IconIoLogo from '~icons/io/logo';
-import BaseLayout from '../components/base-layout.vue';
-</script>
-
 <template>
 	<base-layout layout="end" class="bg-blend-purple">
 		<IconIoLogo class="logo" />
@@ -12,6 +7,11 @@ import BaseLayout from '../components/base-layout.vue';
 		</h1>
 	</base-layout>
 </template>
+
+<script setup>
+import IconIoLogo from '~icons/io/logo';
+import BaseLayout from '../components/BaseLayout.vue';
+</script>
 
 <style scoped>
 .slidev-layout.end {

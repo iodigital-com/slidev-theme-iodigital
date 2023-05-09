@@ -38,12 +38,12 @@ Usage:
 ---
 layout: default <!-- optional -->
 ---
-```
 
 # Slide title first
 ## Optional subtitle
 
 Amazing content which can be anything, as long as it fits the slide. Just be aware that the subtitle will be show above the title. Both are on the left side.
+```
 
 ### Cover
 As the name suggests, this layout is the first slide of your slide deck. It announces the title/subject of the presentation.
@@ -57,6 +57,7 @@ Usage:
 layout: cover
 image: /path/to/cover/image.jpg # Can be absolute or relative
 ---
+```
 
 ### Full
 A full size layout. Title on top. Content can be anything you want. If you want to separate your content into columns, have floating images or a large video player, you can do so in your markdown. Just use HTML to create your own layout.
@@ -72,7 +73,7 @@ layout: full
 ```
 
 ### Iframe / Iframe-left / Iframe-right
-This is the default sli.dev way to display an Iframe inside a slide. Make sure that you use the embed URL if it is provided. 
+This is the default sli.dev way to display an Iframe inside a slide. Make sure that you use the embed URL if it is provided.
 
 <img alt="Screenshot of Iframe layout" src="./screenshots/layouts/iframe.png" style="max-width: 50%">
 
@@ -83,6 +84,25 @@ Usage:
 layout: iframe / iframe-left / iframe-right
 url: https://www.youtube.com/embed/dQw4w9WgXcQ
 ---
+```
+
+### Image
+A large image as background with only a title. The title is either displayed as an overlay on the image or in a black box.
+
+<img alt="Screenshot of the default variant for the image layout" src="./screenshots/layouts/image-default.png" style="max-width: 50%">
+<img alt="Screenshot of the box variant for the image layout" src="./screenshots/layouts/image-box.png" style="max-width: 50%">
+
+Usage:
+
+
+```
+---
+layout: image
+image: path/to/my/image.jpg
+variant: default|box
+---
+
+# Image layout in the [variant] variant
 ```
 
 ### Intro
@@ -108,11 +128,11 @@ Speaker Description
 
 ```
 
-### Quote 
-Use a single slide per quote or statement 
+### Quote
+Use a single slide per quote or statement
 
 <img alt="Screenshot of quote layout" src="./screenshots/layouts/quote.png" style="max-width: 50%">
- 
+
 Usage:
 ```
 ---
@@ -125,11 +145,11 @@ cite: https://en.wikipedia.org/wiki/Brand
 Products are made in a factory but brands are created in the mind
 ```
 
-### Two-cols 
+### Two-cols
 As the name suggest, this layout divides the page in two columns (left / right). By default the content is placed in the left column and with the `::right::` slot you're able to place content in the right column.
 
 <img alt="Screenshot of two cols layout" src="./screenshots/layouts/two-cols.png" style="max-width: 50%">
- 
+
 Usage:
 ```
 ---
@@ -139,7 +159,7 @@ division: 70/30
 
 # Left side title
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper.
 
 ::right::
 
@@ -205,7 +225,7 @@ This component can be used to create a table of content based on the headings fr
 
 <img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
 
-Usage: 
+Usage:
 
 ```
 ---
