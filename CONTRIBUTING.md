@@ -2,7 +2,7 @@
 
 ## Getting started
 
-This sli.dev theme is based on the iO brand and the already existing powerpoint theme, these can be found on [Confluence](https://confluence.hosted-tools.com/display/BRAND/iO+Brand+Identity+Home).
+This sli.dev theme is based on the iO brand and the already existing powerpoint theme, these can be found on the iO Confluence. In Bridge go to Confluence and under spaces select `iO Brand Identity`.
 Please get yourself familiar with the existing theme before you start contributing.
 
 ### Issues
