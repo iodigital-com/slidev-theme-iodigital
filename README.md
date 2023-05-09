@@ -38,12 +38,12 @@ Usage:
 ---
 layout: default <!-- optional -->
 ---
-```
 
 # Slide title first
 ## Optional subtitle
 
 Amazing content which can be anything, as long as it fits the slide. Just be aware that the subtitle will be show above the title. Both are on the left side.
+```
 
 ### Cover
 As the name suggests, this layout is the first slide of your slide deck. It announces the title/subject of the presentation.
@@ -101,6 +101,8 @@ layout: image
 image: path/to/my/image.jpg
 variant: default|box
 ---
+
+# Image layout in the [variant] variant
 ```
 
 ### Intro

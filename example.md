@@ -17,11 +17,13 @@ Presentation slides for developers
   <dt>Image</dt>
   <dd>Be sure to pick an image which has it's subject in the frame</dd>
 </dl>
+
 ---
-class: bg-orange
 layout: section
 ---
-# What is Slidev?
+# Amazing new section
+
+## Level 1 (implicit) - blend
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -45,6 +47,18 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 # Table of content
 <Toc />
 
+---
+layout: section
+level: 2
+---
+# Sub-section
+## Level 2 (explicit) - solid
+---
+layout: section
+level: 3
+---
+# Sub-sub-section
+## Level 3 - light
 ---
 layout: intro
 image: https://www.davebitter.com/img/dave.png
@@ -108,6 +122,7 @@ Now this is a story all about how my life got flipped, turned upside down. And I
 ---
 layout: section
 section: New section
+chapter: 'Story time'
 ---
 # Navigation
 
@@ -171,6 +186,7 @@ layout: full
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi pariatur necessitatibus ut adipisci vel ad, aperiam magni, id eaque at quae nisi quibusdam? Libero sint qui commodi voluptate atque. Aperiam, ex. Rerum iste ducimus sunt, omnis, nulla aliquam dignissimos ipsum ex quam architecto veniam ab nesciunt aut dolores deleniti quia voluptatem mollitia qui dicta, excepturi repellendus quaerat? Corrupti, vitae. Eos, suscipit ea voluptatum qui vero quibusdam fuga incidunt, culpa at quo, quam ipsam quia perferendis reiciendis tenetur quidem totam eligendi architecto sequi doloremque ex iste in asperiores! Delectus, laudantium.
   </p>
 </div>
+
 
 ---
 layout: full

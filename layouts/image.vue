@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import { resolveAssetUrl } from '@slidev/client/layoutHelper';
-import BaseLayout from '../components/base-layout.vue';
+import BaseLayout from '../components/BaseLayout.vue';
 
 const props = defineProps({
     image: {
@@ -24,11 +24,11 @@ const style = computed(() => ({
 </script>
 
 <template>
-<base-layout layout="image" :class="`image--${props.variant}`" :style="style">
-    <div class="content">
-        <slot />
-    </div>
-</base-layout>
+	<base-layout layout="image" :class="`image--${props.variant}`" :style="style">
+		<div class="content">
+			<slot />
+		</div>
+	</base-layout>
 </template>
 
 <style scoped>

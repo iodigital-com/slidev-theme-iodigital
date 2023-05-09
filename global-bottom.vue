@@ -1,7 +1,8 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { getSectionTitleGetter, footerLayoutBlacklist } from './theme.config';
+import { footerLayoutBlacklist } from './theme.config';
+import { getAllSections, getCurrentSection, getSectionTitleGetter } from './theme.utils';
 import rawRoutes from '/@slidev/routes';
 
 const cite = computed(() => {
@@ -10,8 +11,26 @@ const cite = computed(() => {
     return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
 })
 
-const isFooterVisibile = computed(() => {
-    const currentLayout = $slidev.nav.currentLayout;
+const isSubSection = () => {
+    if ($slidev.nav.currentLayout === 'section') {
+        const sections = getAllSections(rawRoutes);
+        const section = getCurrentSection($slidev.nav.currentSlideId, sections);
+
+        return section?.meta?.level === 3;
+    }
+    return false;
+}
+
+const isFooterIconVisible = computed(() => {
+    if (!isFooterVisible.value) {
+        return false;
+    }
+
+    return isSubSection();
+});
+
+const isFooterVisible = computed(() => {
+    const { currentLayout } = $slidev.nav;
 
     const isShowFooter = Boolean($slidev.configs.footer ?? true);
     const isVisibleOnLayout = !footerLayoutBlacklist.includes(currentLayout);
@@ -24,18 +43,19 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
 
 <template>
 	<footer
-		v-if="isFooterVisibile"
+		v-if="isFooterVisible || isFooterIconVisible"
 		class="footer"
 	>
 		<div class="flex items-end gap-x-8">
 			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
-			<span class="section-title">{{ latestSectionTitleOrPresentationTitle }}</span>
+			<!-- eslint-disable-next-line vue/no-v-html -->
+			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle" />
 		</div>
 		<div class="flex row items-end">
 			<div v-if="!!cite" class="mr-4">
 				<a :href="cite">{{ cite }}</a>
 			</div>
-			<IconIoLogo class="logo" />
+			<IconIoLogo v-if="isFooterIconVisible" class="logo" />
 		</div>
 	</footer>
 </template>
@@ -45,7 +65,7 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
     @apply absolute bottom-0 right-0 left-0 z-50 pb-4 px-14;
     @apply flex justify-between;
     @apply text-xs;
-    @apply transition-[color] duration-200 ease-out
+    @apply transition-[color] duration-200 ease-out;
 }
 
 .section-title {

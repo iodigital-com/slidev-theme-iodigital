@@ -1,18 +1,26 @@
 <template>
-	<div class="grid slidev-layout bg-blend-purple text-center">
-		<IconIoLogo width="80" height="80" class="logo absolute left-[56px] top-[40px]" />
+	<base-layout layout="end" class="bg-blend-purple">
+		<IconIoLogo class="logo" />
 		<h1 class="title">
-			Together we see <br> <em>Infinite Opportunities</em>
+			Together we see<br>
+			<em>Infinite Opportunities</em>
 		</h1>
-	</div>
+	</base-layout>
 </template>
 
 <script setup>
 import IconIoLogo from '~icons/io/logo';
+import BaseLayout from '../components/BaseLayout.vue';
 </script>
 
-<style>
-	.title {
-		place-self: center start;
-	}
+<style scoped>
+.slidev-layout.end {
+	@apply flex justify-start items-center;
+}
+.logo {
+	@apply absolute w-24 h-24 left-14 top-14;
+}
+.title {
+	justify-self: center;
+}
 </style>
