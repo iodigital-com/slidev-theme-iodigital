@@ -47,7 +47,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 ---
 layout: intro
-image: https://www.davebitter.com/img/dave.jpg
+image: https://www.davebitter.com/img/dave.png
 ---
 # Dave Bitter
 
@@ -125,17 +125,17 @@ Hover on the bottom-left corner to see the navigation's controls panel
 ---
 layout: image
 image: ./beehive.jpg
-variant: full
+variant: default
 ---
 
-# Full image with overlaying title over 3 lines
+# Image layout in the _default_ variant
 ---
 layout: image
 image: ./beehive.jpg
 variant: box
 ---
 
-# Full image with overlaying title in a black box
+# Image layout in the _box_ variant
 
 ---
 layout: intro

@@ -10,9 +10,9 @@ const props = defineProps({
     },
     variant: {
         type: String,
-        default: 'box',
+        default: 'default',
         validator(variant) {
-            return ['box', 'full'].includes(variant);
+            return ['box', 'default'].includes(variant);
         },
     },
 });
@@ -38,7 +38,7 @@ const style = computed(() => ({
 
     background-image: var(--background-image);
 }
-.image.image--full, .image.image--box {
+.image.image--default, .image.image--box {
     @apply bg-center bg-cover;
     @apply flex items-end;
 
