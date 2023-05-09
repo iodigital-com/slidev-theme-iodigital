@@ -47,7 +47,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 ---
 layout: intro
-image: https://www.davebitter.com/img/dave.jpg
+image: https://www.davebitter.com/img/dave.png
 ---
 # Dave Bitter
 
@@ -121,6 +121,21 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
 | <kbd>up</kbd> | previous slide |
 | <kbd>down</kbd> | next slide |
+
+---
+layout: image
+image: ./beehive.jpg
+variant: default
+---
+
+# Image layout in the _default_ variant
+---
+layout: image
+image: ./beehive.jpg
+variant: box
+---
+
+# Image layout in the _box_ variant
 
 ---
 layout: intro
@@ -231,9 +246,9 @@ layout: two-cols
 division: "40/60"
 ---
 # left
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nunc orci. Donec sit amet tincidunt ipsum. Maecenas tristique ornare nisi a ullamcorper.
 
-Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat. 
+Praesent semper pellentesque viverra. Donec consectetur condimentum quam, vel dapibus ipsum venenatis ac. Aliquam erat volutpat.
 
 Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 
@@ -241,7 +256,7 @@ Vivamus non arcu at nisi auctor interdum. Praesent laoreet aliquam tempor.
 # right
 Integer convallis dignissim nunc et hendrerit. Proin tempus, eros sed tristique fringilla:
 
-- Sapien leo 
-- Vulputate nisl 
-- Pulvinar suscipit 
-- Eros augue nec tortor. 
+- Sapien leo
+- Vulputate nisl
+- Pulvinar suscipit
+- Eros augue nec tortor.
