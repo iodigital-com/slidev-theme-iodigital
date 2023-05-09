@@ -1,10 +1,10 @@
 <template>
-	<base-layout layout="two-cols">
+	<BaseLayout layout="two-cols">
 		<div class="h-full grid gap-12 place-content-center" :style="{ gridTemplateColumns: division }">
 			<div><slot /></div>
 			<div><slot name="right" /></div>
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>

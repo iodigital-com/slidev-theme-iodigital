@@ -1,7 +1,7 @@
 <template>
-	<base-layout layout="full">
+	<BaseLayout layout="full">
 		<slot />
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>

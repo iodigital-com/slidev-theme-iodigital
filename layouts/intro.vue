@@ -1,5 +1,5 @@
 <template>
-	<base-layout layout="intro" class="bg-orange">
+	<BaseLayout layout="intro" class="bg-orange">
 		<div class="my-auto flex flex-col">
 			<div class="flex">
 				<div class="w-1/2 flex justify-center items-center p-8 max-h-md object-cover" :class="imageOrder">
@@ -13,7 +13,7 @@
 				<slot name="social" />
 			</div>
 		</div>
-	</base-layout>
+	</BaseLayout>
 </template>
 
 <script setup>
