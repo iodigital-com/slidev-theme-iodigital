@@ -21,13 +21,13 @@ chapter: introduction|story|my new subject|conclusion
 
 ## Sections
 
-Sections are a bit more complicated than chapters. The section's title is displayed in the slide's footer and you can have sub sections and even sub sub section. They introduce a new subject of your presentation. Its background is determined by its corresponding [chapter](#chapters) and provides a visual cue for your audience that you are switching subjects.
+Sections are a bit more complicated than chapters. The section's title is displayed in the slide's footer and you can have sub sections and even sub sub section. They introduce a new subject of your presentation. Its background is determined by its corresponding [chapter](#chapters) and provides a visual cue for your audience that you are switching subjects. Also, the `<Toc />` component will only show level 1 sections by default.
 
 ### How To Use Sections
 
 Introduce a new section by using the `section` layout. Its title will be perpetuated in the footer until a new section is introduced. However, you can also determine the section's title by using the `section` config in the frontmatter.
 
-There could be cases where you only want to use the `section` layout because it looks really good, but omit its title in the footer. In that case you can set `section: false`.
+There could be cases where you only want to use the `section` layout because it looks really good, but omit all its other features. In that case you can set `section: false`.
 
 ```
 ---
