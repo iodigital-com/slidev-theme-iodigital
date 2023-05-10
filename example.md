@@ -19,11 +19,16 @@ Presentation slides for developers
 </dl>
 
 ---
+layout: image-right
+image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+---
+# Table of content
+<Toc />
+
+---
 layout: section
 ---
 # Amazing new section
-
-## Level 1 (implicit) - blend
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -41,24 +46,15 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 ---
-layout: image-right
-image: 'https://source.unsplash.com/collection/94734566/1920x1080'
----
-# Table of content
-<Toc />
-
----
 layout: section
 level: 2
 ---
-# Sub-section
-## Level 2 (explicit) - solid
+# Subsection
 ---
 layout: section
 level: 3
 ---
-# Sub-sub-section
-## Level 3 - light
+# Sub-subsection
 ---
 layout: intro
 image: https://www.davebitter.com/img/dave.png

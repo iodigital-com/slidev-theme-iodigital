@@ -17,11 +17,11 @@ theme: iodigital
 Learn more about [how to use a theme](https://sli.dev/themes/use).
 
 ## Settings
-Next to the [available frontmatter customizations](https://sli.dev/custom/), this theme provide a few additional ones.
+Next to the [available frontmatter customizations](https://sli.dev/custom/), this theme provides a few additional ones.
 
 | Name   | Type      | Default | Use         | Description |
 | ------ | --------- | ------- | ----------- | ----------- |
-| footer | `boolean` | `true`  | First Slide | Display the footer on each slide (except for layouts `cover`, `intro` & `end`)
+| footer | `boolean` | `true`  | First Slide | Display the footer on each slide (except for layouts `cover`, `intro` & `end`) |
 
 ## Layouts
 
@@ -32,11 +32,11 @@ This layout will probably be most used for content slides. You can put anything 
 
 <img alt="Screenshot of default layout" src="./screenshots/layouts/default.png" style="max-width: 50%">
 
-Usage:
+#### Usage
 
 ```
 ---
-layout: default <!-- optional -->
+layout: default # optional
 ---
 
 # Slide title first
@@ -50,7 +50,7 @@ As the name suggests, this layout is the first slide of your slide deck. It anno
 
 <img alt="Screenshot of cover layout" src="./screenshots/layouts/cover.png" style="max-width: 50%">
 
-Usage:
+#### Usage
 
 ```
 ---
@@ -64,12 +64,16 @@ A full size layout. Title on top. Content can be anything you want. If you want 
 
 <img alt="Screenshot of full layout" src="./screenshots/layouts/full.png" style="max-width: 50%">
 
-Usage:
+#### Usage
 
 ```
 ---
 layout: full
 ---
+
+# My Amazing title
+
+Some content
 ```
 
 ### Iframe / Iframe-left / Iframe-right
@@ -77,7 +81,7 @@ This is the default sli.dev way to display an Iframe inside a slide. Make sure t
 
 <img alt="Screenshot of Iframe layout" src="./screenshots/layouts/iframe.png" style="max-width: 50%">
 
-Usage:
+#### Usage
 
 ```
 ---
@@ -89,11 +93,12 @@ url: https://www.youtube.com/embed/dQw4w9WgXcQ
 ### Image
 A large image as background with only a title. The title is either displayed as an overlay on the image or in a black box.
 
-<img alt="Screenshot of the default variant for the image layout" src="./screenshots/layouts/image-default.png" style="max-width: 50%">
-<img alt="Screenshot of the box variant for the image layout" src="./screenshots/layouts/image-box.png" style="max-width: 50%">
+<div style="display:flex;gap:1em">
+  <img alt="Screenshot of the default variant for the image layout" src="./screenshots/layouts/image/default.png">
+  <img alt="Screenshot of the box variant for the image layout" src="./screenshots/layouts/image/box.png">
+</div>
 
-Usage:
-
+#### Usage
 
 ```
 ---
@@ -110,7 +115,8 @@ Use a single slide per speaker to help introduce them.
 
 <img alt="Screenshot of intro layout" src="./screenshots/layouts/intro.png" style="max-width: 50%">
 
-Usage:
+#### Usage
+
 ```
 ---
 layout: intro
@@ -125,15 +131,16 @@ Speaker Description
 ::social::
 <SocialLink network="io" handle="speaker-handle" />
 <SocialLink network="linkedin" handle="SpeakerHandle" />
-
 ```
 
 ### Quote
+
 Use a single slide per quote or statement
 
 <img alt="Screenshot of quote layout" src="./screenshots/layouts/quote.png" style="max-width: 50%">
 
-Usage:
+#### Usage
+
 ```
 ---
 layout: quote
@@ -145,12 +152,47 @@ cite: https://en.wikipedia.org/wiki/Brand
 Products are made in a factory but brands are created in the mind
 ```
 
+### Section
+
+With only a title - and optional subtitle - this layout indicates a new subject within your slide deck.
+
+Read more about [chapters and sections](./docs/CHAPTERS_AND_SECTIONS.MD).
+
+<div style="display:flex;flex:33% 0 auto;gap:1rem">
+  <img alt="Screenshot of a section in the introduction chapter" src="./screenshots/layouts/section/introduction/section.png">
+  <img alt="Screenshot of a subsection in the introduction chapter" src="./screenshots/layouts/section/introduction/subsection.png">
+  <img alt="Screenshot of a subsubsection in the introduction chapter" src="./screenshots/layouts/section/introduction/sub-subsection.png">
+
+  <img alt="Screenshot of a section in the story chapter" src="./screenshots/layouts/section/story/section.png">
+  <img alt="Screenshot of a subsection in the story chapter" src="./screenshots/layouts/section/story/subsection.png">
+  <img alt="Screenshot of a subsubsection in the story chapter" src="./screenshots/layouts/section/story/sub-subsection.png">
+  <img alt="Screenshot of a section in the conclusion chapter" src="./screenshots/layouts/section/conclusion/section.png">
+
+  <img alt="Screenshot of a subsection in the conclusion chapter" src="./screenshots/layouts/section/conclusion/subsection.png">
+  <img alt="Screenshot of a subsubsection in the conclusion chapter" src="./screenshots/layouts/section/conclusion/sub-subsection.png">
+</div>
+
+#### Usage
+
+```
+---
+layout: section
+level: 1|2|3
+---
+
+# My New Section
+## Optional subtitle
+
+```
+
 ### Two-cols
+
 As the name suggest, this layout divides the page in two columns (left / right). By default the content is placed in the left column and with the `::right::` slot you're able to place content in the right column.
 
 <img alt="Screenshot of two cols layout" src="./screenshots/layouts/two-cols.png" style="max-width: 50%">
 
-Usage:
+#### Usage
+
 ```
 ---
 layout: two-cols
@@ -183,16 +225,17 @@ Mainly used in (but not limited to) the [layout](#intro) layout. It creates an a
 - Twitter
 - Github
 
-Usage:
+#### Usage
 
 ```
 <SocialLink handle="some-handle" network="io" />
 ```
 
 ### ProfileCard
+
 This component can be used to create a profile card displaying the `firstName` and `lastName` and optionally the `functionTitle`, `email`, `telephone` and profile picture (`image`).
 
-Usage:
+#### Usage
 
 ```
 <ProfileCard
@@ -209,7 +252,7 @@ Usage:
 
 This theme supports Material Design Icons (MDI) out of the box. Custom icons are also available (e.g. io logo). Each icon has its own (self-closing) element and can be written in both CamelCase and kebab-case.
 
-Usage:
+#### Usage
 
 ```
 <IconMdiAccount />
@@ -225,7 +268,7 @@ This component can be used to create a table of content based on the headings fr
 
 <img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
 
-Usage:
+#### Usage
 
 ```
 ---
