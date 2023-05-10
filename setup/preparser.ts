@@ -12,8 +12,8 @@ export default definePreparserSetup(() => {
             frontmatter.hideInToc = true;
 
             if ('layout' in frontmatter) {
-                // Show only slides in ToC with layout: section and level: 1 or undefined
-                if (frontmatter.layout === 'section' && (frontmatter.level === 1 || frontmatter.level === undefined)) {
+                // Show only slides in ToC with layout: section, section is not set to false and level: 1 or undefined
+                if (frontmatter.layout === 'section' && frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
                     frontmatter.hideInToc = false;
                 }
 
