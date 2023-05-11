@@ -5,6 +5,7 @@ import { definePreparserSetup } from '@slidev/types'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export default definePreparserSetup(() => {
+    let previousFrontmatter: any = undefined;
     const slideConfig = {
         currentChapter: 'introduction',
         currentSection: undefined,
@@ -15,8 +16,10 @@ export default definePreparserSetup(() => {
         return ((content.match(/^#\s+(.+)\n?/) || [])[1]);
     }
 
-    function getTransitionDirection() {
+    function getTransitionDirection(frontmatter) {
         if (slideConfig.currentSection === undefined) return 'slide-left';
+        if (frontmatter.layout === 'section' && (frontmatter.level === 1 || frontmatter.level === undefined) && previousFrontmatter) previousFrontmatter.transition = 'slide-left';
+
         return 'slide-up';
     }
 
@@ -59,8 +62,12 @@ export default definePreparserSetup(() => {
         }
     },{
         transformSlide(content, frontmatter) {
+            if ('transition' in frontmatter) return content;
+
             // Set transition direction in frontmatter for each slide
-            frontmatter.transition = getTransitionDirection();
+            frontmatter.transition = getTransitionDirection(frontmatter);
+
+            previousFrontmatter = frontmatter;
 
             return content;
         }

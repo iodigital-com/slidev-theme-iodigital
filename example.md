@@ -96,7 +96,6 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: default
-
 ---
 # <em>Fresh Prince of Bel-Air</em> Theme Song
 ## DJ Jazzy Jeff & The Fresh Prince
