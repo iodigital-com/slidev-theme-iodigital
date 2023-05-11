@@ -22,7 +22,7 @@ Presentation slides for developers
 layout: image-right
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
-# Table of content
+# Table of contents
 <Toc />
 
 ---
@@ -96,7 +96,6 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: default
-
 ---
 # <em>Fresh Prince of Bel-Air</em> Theme Song
 ## DJ Jazzy Jeff & The Fresh Prince

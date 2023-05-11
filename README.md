@@ -23,6 +23,16 @@ Next to the [available frontmatter customizations](https://sli.dev/custom/), thi
 | ------ | --------- | ------- | ----------- | ----------- |
 | footer | `boolean` | `true`  | First Slide | Display the footer on each slide (except for layouts `cover`, `intro` & `end`) |
 
+### Transitions
+
+The default transition behavior is handled based on the [sections](./docs/CHAPTERS_AND_SECTIONS.MD). Overriding the default is possible by adding the transition property to the frontmatter.
+
+```
+---
+transition: slide-up
+---
+```
+
 ## Layouts
 
 This theme provides the following layouts:
@@ -262,11 +272,11 @@ This theme supports Material Design Icons (MDI) out of the box. Custom icons are
 <IconIoLogo></IconIoLogo>
 ```
 
-### Table of content
+### Table of contents
 
-This component can be used to create a table of content based on the headings from every the slide.
+This component can be used to create a table of contents based on the headings from every level 1 section slide.
 
-<img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
+<img alt="Screenshot of table of contents layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
 
 #### Usage
 
@@ -275,11 +285,13 @@ This component can be used to create a table of content based on the headings fr
 layout: image-right (this can be any layout)
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
-# Table of content
+# Table of contents
 <Toc />
 ```
 
 ## Contributing
+
+For more information about contributing to this project see the [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 - `npm install`
 - `npm run dev` to start theme preview of `example.md`
