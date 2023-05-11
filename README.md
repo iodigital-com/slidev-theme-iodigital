@@ -25,7 +25,7 @@ Next to the [available frontmatter customizations](https://sli.dev/custom/), thi
 
 ### Transitions
 
-The default transition behavior is handled based on the sections. Overriding the default is possible by adding the transition property to the frontmatter.
+The default transition behavior is handled based on the [sections](./docs/CHAPTERS_AND_SECTIONS.MD). Overriding the default is possible by adding the transition property to the frontmatter.
 
 ```
 ---
@@ -272,11 +272,11 @@ This theme supports Material Design Icons (MDI) out of the box. Custom icons are
 <IconIoLogo></IconIoLogo>
 ```
 
-### Table of content
+### Table of contents
 
-This component can be used to create a table of content based on the headings from every level 1 section slide.
+This component can be used to create a table of contents based on the headings from every level 1 section slide.
 
-<img alt="Screenshot of table of content layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
+<img alt="Screenshot of table of contents layout" src="./screenshots/layouts/toc.png" style="max-width: 50%">
 
 #### Usage
 
@@ -285,7 +285,7 @@ This component can be used to create a table of content based on the headings fr
 layout: image-right (this can be any layout)
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
-# Table of content
+# Table of contents
 <Toc />
 ```
 

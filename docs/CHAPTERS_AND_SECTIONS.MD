@@ -21,7 +21,7 @@ chapter: introduction|story|my new subject|conclusion
 
 ## Sections
 
-Sections are a bit more complicated than chapters. The section's title is displayed in the slide's footer and you can have sub sections and even sub sub section. They introduce a new subject of your presentation. Its background is determined by its corresponding [chapter](#chapters) and provides a visual cue for your audience that you are switching subjects. Also, the `<Toc />` component will only show level 1 sections by default.
+Sections are a bit more complicated than chapters. The section's title is displayed in the slide's footer and you can have sub sections and even sub sub section. They introduce a new subject of your presentation. Its background is determined by its corresponding [chapter](#chapters) and provides a visual cue for your audience that you are switching subjects. Also, the `<Toc />` component will only show level 1 sections by default. Transitions are also handled based on sections, a new section slides in from the left and all slides within a section slide up.
 
 ### How To Use Sections
 

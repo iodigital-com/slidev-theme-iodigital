@@ -17,8 +17,13 @@ export default definePreparserSetup(() => {
     }
 
     function getTransitionDirection(frontmatter) {
-        if (slideConfig.currentSection === undefined) return 'slide-left';
-        if (frontmatter.layout === 'section' && (frontmatter.level === 1 || frontmatter.level === undefined) && previousFrontmatter) previousFrontmatter.transition = 'slide-left';
+        if (slideConfig.currentSection === undefined) {
+            return 'slide-left';
+        }
+
+        if (frontmatter.layout === 'section' && (frontmatter.level === 1 || frontmatter.level === undefined) && previousFrontmatter) {
+            previousFrontmatter.transition = 'slide-left'
+        }
 
         return 'slide-up';
     }
