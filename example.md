@@ -3,7 +3,7 @@ theme: ./
 
 layout: cover
 image: './beekeeper.jpg'
-# image: './beehive.jpg'
+# image: './b eehive.jpg'
 # image: './shape.png'
 # image: './IO_Amsterdam_957.jpg'
 ---
@@ -119,6 +119,7 @@ Now this is a story all about how my life got flipped, turned upside down. And I
 layout: section
 section: New section
 chapter: 'Story time'
+footer: false
 ---
 # Navigation
 
