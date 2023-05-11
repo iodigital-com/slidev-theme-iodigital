@@ -24,6 +24,7 @@ export default definePreparserSetup(() => {
     }
 
     return [{
+        // Hide non-sections layouts in ToC
         transformSlide(content, frontmatter) {
             // Early return if hideInToc (Table of Content) is manually set in frontmatter
             if ('hideInToc' in frontmatter) return content;
@@ -43,6 +44,7 @@ export default definePreparserSetup(() => {
             return content;
         },
     },{
+        // Set current section and chapter in frontmatter for each slide
         transformSlide(content, frontmatter) {
             if ('layout' in frontmatter) {
                 if (frontmatter.layout === 'section') {
@@ -61,10 +63,11 @@ export default definePreparserSetup(() => {
             return content;
         }
     },{
+        // Set transition direction in frontmatter for each slide
         transformSlide(content, frontmatter) {
+            // Early return if transition is manually set in frontmatter
             if ('transition' in frontmatter) return content;
 
-            // Set transition direction in frontmatter for each slide
             frontmatter.transition = getTransitionDirection(frontmatter);
 
             previousFrontmatter = frontmatter;
