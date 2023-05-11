@@ -118,6 +118,7 @@ Now this is a story all about how my life got flipped, turned upside down. And I
 layout: section
 section: New section
 chapter: 'Story time'
+footer: false
 ---
 # Navigation
 

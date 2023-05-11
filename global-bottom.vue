@@ -30,13 +30,17 @@ const isFooterIconVisible = computed(() => {
 });
 
 const isFooterVisible = computed(() => {
-    const { currentLayout } = $slidev.nav;
+    const { currentLayout, currentRoute } = $slidev.nav;
 
-    const isShowFooter = Boolean($slidev.configs.footer ?? true);
+    const isShowFooter = Boolean(currentRoute.meta?.slide?.frontmatter.footer ?? true);
+    if (!isShowFooter) {
+        return false;
+    }
+
     const isVisibleOnLayout = !footerLayoutBlacklist.includes(currentLayout);
     const isFullImage = currentLayout === 'image' && $slidev.nav.currentRoute.meta?.variant !== 'header';
 
-    return isShowFooter && isVisibleOnLayout && !isFullImage;
+    return isVisibleOnLayout && !isFullImage;
 });
 const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
 </script>

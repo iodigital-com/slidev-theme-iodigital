@@ -49,13 +49,13 @@
   }
 }
 
-.footer:has(+ #slideshow > :is(
+.footer:has(+ #slideshow > .slidev-layout:is(
   .bg-orange,
   .bg-blend-orange,
   .bg-blue,
   .bg-blend-blue,
   .bg-purple,
-  .bg-blend-purple,
+  .bg-blend-purple
   ):not([style*="display: none;"]) /* The not selector is used to detect if the selector matches the current slide */
 ) {
   @apply text-white;
