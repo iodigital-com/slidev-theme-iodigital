@@ -11,7 +11,7 @@ const props = defineProps({
     layout: {
         type: String,
         required: true,
-    },
+    }
 });
 
 const classNames = computed(() => props.layout);
