@@ -11,7 +11,13 @@ export default definePreparserSetup(() => {
     }
 
     function getSlideTitle(content) {
+        // Return the first title of the slide content
         return ((content.match(/^#\s+(.+)\n?/) || [])[1]);
+    }
+
+    function getTransitionDirection() {
+        if (slideConfig.currentSection === undefined) return 'slide-left';
+        return 'slide-up';
     }
 
     return [{
@@ -26,8 +32,19 @@ export default definePreparserSetup(() => {
                 if (frontmatter.layout === 'section') {
                     // Show only slides in ToC with layout: section, section is not set to false and level: 1 or undefined
                     if (frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
-                        slideConfig.currentSection = getSlideTitle(content);
                         frontmatter.hideInToc = false;
+                    }
+                }
+            }
+
+            return content;
+        },
+    },{
+        transformSlide(content, frontmatter) {
+            if ('layout' in frontmatter) {
+                if (frontmatter.layout === 'section') {
+                    if (frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
+                        slideConfig.currentSection = getSlideTitle(content);
                     }
                 }
             }
@@ -39,7 +56,14 @@ export default definePreparserSetup(() => {
             frontmatter.iometa = { ...slideConfig };
 
             return content;
-        },
+        }
+    },{
+        transformSlide(content, frontmatter) {
+            // Set transition direction in frontmatter for each slide
+            frontmatter.transition = getTransitionDirection();
+
+            return content;
+        }
     }]
 })
 
