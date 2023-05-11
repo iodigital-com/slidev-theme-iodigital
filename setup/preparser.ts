@@ -1,8 +1,19 @@
 import { definePreparserSetup } from '@slidev/types'
 
+
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export default definePreparserSetup(() => {
+    const slideConfig = {
+        currentChapter: 'introduction',
+        currentSection: undefined,
+    }
+
+    function getSlideTitle(content) {
+        return ((content.match(/^#\s+(.+)\n?/) || [])[1]);
+    }
+
     return [{
         transformSlide(content, frontmatter) {
             // Early return if hideInToc (Table of Content) is manually set in frontmatter
@@ -12,13 +23,22 @@ export default definePreparserSetup(() => {
             frontmatter.hideInToc = true;
 
             if ('layout' in frontmatter) {
-                // Show only slides in ToC with layout: section, section is not set to false and level: 1 or undefined
-                if (frontmatter.layout === 'section' && frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
-                    frontmatter.hideInToc = false;
+                if (frontmatter.layout === 'section') {
+                    // Show only slides in ToC with layout: section, section is not set to false and level: 1 or undefined
+                    if (frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
+                        slideConfig.currentSection = getSlideTitle(content);
+                        frontmatter.hideInToc = false;
+                    }
                 }
-
-                return content;
             }
+
+            if ('chapter' in frontmatter) {
+                slideConfig.currentChapter = frontmatter.chapter;
+            }
+
+            frontmatter.iometa = { ...slideConfig };
+
+            return content;
         },
     }]
 })

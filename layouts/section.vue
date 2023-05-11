@@ -1,20 +1,20 @@
 <script setup>
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
-import { getAllChapters, getChapterColor, getCurrentChapter } from '../theme.utils';
+import { getChapterColor } from '../theme.utils';
 import BaseLayout from '../components/BaseLayout.vue';
-import rawRoutes from '/@slidev/routes';
+
+const props = defineProps({
+    iometa: Object,
+    level: Number
+})
 
 // We go a maximum of 3 levels deep. Subtract 1 as JS arrays are 0-based
-const level = computed(() => ($slidev.nav.currentRoute.meta?.slide?.frontmatter?.level ?? 1) - 1);
+const level = computed(() => (props.level ?? 1) - 1);
 
 const backgroundVariant = computed(() => {
-    const chapters = getAllChapters(rawRoutes);
-    const chapter = getCurrentChapter($slidev.nav.currentPage, chapters);
-
-    const color = getChapterColor(chapter.meta.chapter);
+    const color = getChapterColor(props.iometa.currentChapter);
     const variants = [`bg-blend-${color}`, `bg-${color}`, `bg-sub-${color}`];
-
     return variants[level.value];
 })
 </script>
