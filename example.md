@@ -3,7 +3,7 @@ theme: ./
 
 layout: cover
 image: './beekeeper.jpg'
-# image: './b eehive.jpg'
+# image: './beehive.jpg'
 # image: './shape.png'
 # image: './IO_Amsterdam_957.jpg'
 ---
