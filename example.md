@@ -71,6 +71,23 @@ image: https://www.davebitter.com/img/dave.png
 - <SocialLink network="github" handle="DaveBitter" />
 - <SocialLink network="linkedin" handle="davebitter" />
 - <SocialLink network="twitter" handle="dave_bitter" />
+
+---
+layout: center
+---
+<Facts
+    :facts="[{
+        stat: '30%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '130%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '10.000',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla mollitia ad, laborum ipsum odit asperiores quo optio perspiciatis sequi quasi voluptate natus aperiam molestias ullam perferendis esse doloremque unde consequuntur.'
+    }]"
+/>
+
 ---
 layout: image-right
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'

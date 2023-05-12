@@ -258,6 +258,27 @@ This component can be used to create a profile card displaying the `firstName` a
   />
 ```
 
+### Facts
+
+This component can be used to display facts. It accepts an array of facts `[{ fact: '30%', description: 'Fact description' }]` and optionally a direction `row | column` with a default of `row`.
+
+#### Usage
+
+```
+<Facts
+    :facts="[{
+        stat: '30%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '130%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '10.000',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla mollitia ad, laborum ipsum odit asperiores quo optio perspiciatis sequi quasi voluptate natus aperiam molestias ullam perferendis esse doloremque unde consequuntur.'
+    }]"
+/>
+```
+
 ### Icons
 
 This theme supports Material Design Icons (MDI) out of the box. Custom icons are also available (e.g. io logo). Each icon has its own (self-closing) element and can be written in both CamelCase and kebab-case.
