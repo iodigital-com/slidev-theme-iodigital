@@ -1,6 +1,13 @@
+<template>
+	<BaseLayout layout="image" :class="`image--${props.variant}`" :style="style">
+		<div class="content">
+			<slot />
+		</div>
+	</BaseLayout>
+</template>
+
 <script setup>
 import { computed } from 'vue';
-import { resolveAssetUrl } from '@slidev/client/layoutHelper';
 import BaseLayout from '../components/BaseLayout.vue';
 
 const props = defineProps({
@@ -18,18 +25,10 @@ const props = defineProps({
 });
 
 const style = computed(() => ({
-    '--background-image': `url(${resolveAssetUrl(props.image)})`,
+    '--background-image': `url(${props.image})`,
 }));
 
 </script>
-
-<template>
-	<BaseLayout layout="image" :class="`image--${props.variant}`" :style="style">
-		<div class="content">
-			<slot />
-		</div>
-	</BaseLayout>
-</template>
 
 <style scoped>
 .image {
