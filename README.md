@@ -4,6 +4,8 @@
 
 An iO Digital theme for [Slidev](https://github.com/slidevjs/slidev).
 
+See a demo [here](https://slidev-theme-iodigital-io-technology.vercel.app).
+
 ## Install
 
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
@@ -276,6 +278,27 @@ This component can be used to create a profile card displaying the `firstName` a
   telephone="06-12345678"
   image="https://picsum.photos/200/200"
   />
+```
+
+### Facts
+
+This component can be used to display facts. It accepts an array of facts `[{ fact: '30%', description: 'Fact description' }]` and optionally a direction `row | column` with a default of `row`.
+
+#### Usage
+
+```
+<Facts
+    :facts="[{
+        stat: '30%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '130%',
+        description: 'Short description - maximum three lines'
+    }, {
+        stat: '10.000',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla mollitia ad, laborum ipsum odit asperiores quo optio perspiciatis sequi quasi voluptate natus aperiam molestias ullam perferendis esse doloremque unde consequuntur.'
+    }]"
+/>
 ```
 
 ### Icons
