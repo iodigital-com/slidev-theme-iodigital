@@ -1,6 +1,6 @@
 <template>
 	<ul class="container">
-		<li v-for="fact in facts" :key="fact.stat" class="fact">
+		<li v-for="(fact, index) in facts" :key="index" class="fact">
 			<h2 class="stat">
 				{{ fact.stat }}
 			</h2>
