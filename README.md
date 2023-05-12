@@ -55,6 +55,26 @@ layout: default # optional
 Amazing content which can be anything, as long as it fits the slide. Just be aware that the subtitle will be show above the title. Both are on the left side.
 ```
 
+### CodePen
+
+Since we have CodePen Pro accounts at iO, we expect this to be used frequently in presentations. Just provide the CodePen embed URL and an optional slide title.
+
+<img alt="Screenshot of codepen layout" src="./screenshots/layouts/codepen/title.png" style="max-width: 50%">
+<img alt="Screenshot of codepen layout" src="./screenshots/layouts/codepen/full.png" style="max-width: 50%">
+
+#### Usage
+
+```
+---
+layout: codepen
+pen: [CodePen embed URL]
+---
+
+# Optional Title
+
+Provide the default content when you click the `embed` button in your pen. A Slidev slide needs at least one character as content to recognize it as a slide.
+```
+
 ### Cover
 As the name suggests, this layout is the first slide of your slide deck. It announces the title/subject of the presentation.
 
