@@ -51,7 +51,7 @@ export const networks: Record<string, Network> = {
 /**
  * Layouts in which the footer should not be visible
  */
-export const footerLayoutBlacklist = ['cover', 'intro', 'end'];
+export const footerLayoutBlacklist = ['codepen', 'cover', 'intro', 'end'];
 
 /**
  * Chapters in a slide deck belong to a certain color. This map represents the

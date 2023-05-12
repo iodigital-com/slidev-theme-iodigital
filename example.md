@@ -72,6 +72,15 @@ image: https://www.davebitter.com/img/dave.png
 - <SocialLink network="linkedin" handle="davebitter" />
 - <SocialLink network="twitter" handle="dave_bitter" />
 ---
+layout: codepen
+pen: https://codepen.io/remypar5/embed/mdzKrvE?default-tab=html%2Cresult
+---
+
+See the Pen <a href="https://codepen.io/remypar5/pen/mdzKrvE">
+  Untitled</a> by Remy Parzinski (<a href="https://codepen.io/remypar5">@remypar5</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+
+---
 layout: image-right
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
