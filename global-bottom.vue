@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
 import { footerLayoutBlacklist } from './theme.config';
-import { getAllSections, getCurrentSection, getSectionTitleGetter } from './theme.utils';
+import { getAllSections, getCurrentSection } from './theme.utils';
 import rawRoutes from '/@slidev/routes';
 
 const cite = computed(() => {
@@ -42,7 +42,7 @@ const isFooterVisible = computed(() => {
 
     return isVisibleOnLayout && !isFullImage;
 });
-const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($slidev, rawRoutes));
+const sectionTitle = computed(() => $slidev.nav.currentRoute.meta?.slide?.frontmatter.iometa.currentSection ?? $slidev.configs.title);
 </script>
 
 <template>
@@ -53,7 +53,7 @@ const latestSectionTitleOrPresentationTitle = computed(getSectionTitleGetter($sl
 		<div class="flex items-end gap-x-8">
 			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
 			<!-- eslint-disable-next-line vue/no-v-html -->
-			<span class="section-title" v-html="latestSectionTitleOrPresentationTitle" />
+			<span class="section-title" v-html="sectionTitle" />
 		</div>
 		<div class="flex row items-end">
 			<div v-if="!!cite" class="mr-4">
