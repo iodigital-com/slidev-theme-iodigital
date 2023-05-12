@@ -1,25 +1,6 @@
 import { ChapterColor, chapterColors } from './theme.config';
 
 /**
- * Filter all routes from `rawRoutes` which initiate a new section
- *
- * *Note*: The first route will always initiate a new section
- *
- * @param rawRoutes `import rawRoutes from '/@slidev.routes'`
- * @returns Array of all routes which initiate a new section
- */
-export const getAllSections = (slides: any[]) => slides.filter(route => route.meta.layout === 'section');
-
-/**
- * Get the route which initiated the current section
- *
- * @param slideId Result of `$slidev.nav.currentSlideId`
- * @param chapters Result of {@link getAllSections getAllSections(rawRoutes)}
- * @returns Route which initiated the current (sub(sub))section
- */
-export const getCurrentSection = (slideId: number, sections: any[]) => sections.findLast(s => s.meta.slide.id <= slideId) ?? sections[0];
-
-/**
  * Retrieve the color which represents the current chapter.
  *
  * * `orange` for the _introduction_ chapter

@@ -45,7 +45,7 @@ const props = defineProps({
     },
 });
 
-const penTitle = computed(() => $slidev.nav.currentRoute.meta.slide.title ?? DEFAULT_TITLE);
+const penTitle = computed(() => $slidev.nav.currentRoute.meta?.slide?.title ?? DEFAULT_TITLE);
 </script>
 
 <style scoped>

@@ -2,22 +2,24 @@
 import { computed } from 'vue';
 import IconIoLogo from '~icons/io/logo';
 import { footerLayoutBlacklist } from './theme.config';
-import { getAllSections, getCurrentSection } from './theme.utils';
-import rawRoutes from '/@slidev/routes';
 
 const cite = computed(() => {
-    if ($slidev.nav.currentLayout !== 'quote') return null;
+    const { currentLayout, currentRoute } = $slidev.nav;
 
-    return rawRoutes[$slidev.nav.currentPage - 1]?.meta?.cite || null;
-})
-
-const isSubSection = () => {
-    if ($slidev.nav.currentLayout === 'section') {
-        const sections = getAllSections(rawRoutes);
-        const section = getCurrentSection($slidev.nav.currentSlideId, sections);
-
-        return section?.meta?.level === 3;
+    if (currentLayout !== 'quote') {
+        return null;
     }
+
+    return currentRoute.meta?.cite || null;
+});
+
+const isSubSubSection = () => {
+    const { currentLayout, currentRoute } = $slidev.nav;
+
+    if (currentLayout === 'section') {
+        return currentRoute.meta?.level === 3;
+    }
+
     return false;
 }
 
@@ -26,7 +28,7 @@ const isFooterIconVisible = computed(() => {
         return false;
     }
 
-    return isSubSection();
+    return isSubSubSection() || $slidev.nav.currentRoute.meta?.layout !== 'section';
 });
 
 const isFooterVisible = computed(() => {
@@ -47,15 +49,15 @@ const sectionTitle = computed(() => $slidev.nav.currentRoute.meta?.slide?.frontm
 
 <template>
 	<footer
-		v-if="isFooterVisible || isFooterIconVisible"
+		v-if="isFooterVisible"
 		class="footer"
 	>
-		<div class="flex items-end gap-x-8">
+		<div class="flex items-center gap-x-8">
 			<span class="page-count">{{ $slidev.nav.currentPage }}</span>
 			<!-- eslint-disable-next-line vue/no-v-html -->
 			<span class="section-title" v-html="sectionTitle" />
 		</div>
-		<div class="flex row items-end">
+		<div class="flex row items-center">
 			<div v-if="!!cite" class="mr-4">
 				<a :href="cite">{{ cite }}</a>
 			</div>

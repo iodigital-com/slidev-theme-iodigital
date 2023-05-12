@@ -9,6 +9,7 @@ export default definePreparserSetup(() => {
     const slideConfig = {
         currentChapter: 'introduction',
         currentSection: undefined,
+        currentLevel: 1,
     }
 
     function getSlideTitle(content) {
@@ -22,7 +23,7 @@ export default definePreparserSetup(() => {
         }
 
         if (frontmatter.layout === 'section' && (frontmatter.level === 1 || frontmatter.level === undefined) && previousFrontmatter) {
-            previousFrontmatter.transition = 'slide-left'
+            previousFrontmatter.transition = 'slide-left';
         }
 
         return 'slide-up';
@@ -56,6 +57,7 @@ export default definePreparserSetup(() => {
                     if (frontmatter.section !== false && (frontmatter.level === 1 || frontmatter.level === undefined)) {
                         slideConfig.currentSection = getSlideTitle(content);
                     }
+                    slideConfig.currentLevel = frontmatter.level ?? 1;
                 }
             }
 
