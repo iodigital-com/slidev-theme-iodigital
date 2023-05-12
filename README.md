@@ -4,6 +4,8 @@
 
 An iO Digital theme for [Slidev](https://github.com/slidevjs/slidev).
 
+See a demo [here](https://slidev-theme-iodigital-io-technology.vercel.app).
+
 ## Install
 
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
