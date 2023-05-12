@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+import { handleBackground } from '@slidev/client/layoutHelper';
 import { computed } from 'vue';
 import BaseLayout from '../components/BaseLayout.vue';
 
@@ -18,16 +19,11 @@ const props = defineProps({
     variant: {
         type: String,
         default: 'default',
-        validator(variant) {
-            return ['box', 'default'].includes(variant);
-        },
+        validator: variant => ['box', 'default'].includes(variant),
     },
 });
 
-const style = computed(() => ({
-    '--background-image': `url(${props.image})`,
-}));
-
+const style = computed(() => handleBackground(props.image));
 </script>
 
 <style scoped>

@@ -143,16 +143,16 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>down</kbd> | next slide |
 
 ---
-layout: image
-image: ./beehive.jpg
-variant: default
+layout: 'image'
+image: './beehive.jpg'
+variant: 'default'
 ---
 
 # Image layout in the _default_ variant
 ---
-layout: image
-image: ./beehive.jpg
-variant: box
+layout: 'image'
+image: './beehive.jpg'
+variant: 'box'
 ---
 
 # Image layout in the _box_ variant
