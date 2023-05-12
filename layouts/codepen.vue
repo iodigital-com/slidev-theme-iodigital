@@ -1,13 +1,13 @@
 <template>
 	<BaseLayout layout="codepen" class="p-0">
 		<div class="wrapper">
-			<header v-if="penTitle !== DEFAULT_TITLE">
+			<header v-if="!!penTitle">
 				<h1 class="px-14 pt-14">
 					{{ penTitle }}
 				</h1>
 			</header>
 			<iframe
-				:title="penTitle"
+				:title="penTitle ?? 'Untitled'"
 				:src="props.pen"
 				scrolling="no"
 				frameborder="no"
@@ -25,7 +25,7 @@
 import { computed } from 'vue';
 import BaseLayout from '../components/BaseLayout.vue';
 
-const DEFAULT_TITLE = 'Untitled';
+const DEFAULT_TITLE = null;
 
 const props = defineProps({
     pen: {
